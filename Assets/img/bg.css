@@ -1,0 +1,28 @@
+/*BACKGROUND*/
+
+/*Transparent Background*/
+
+body.lg{
+  background-image: url('bg-login.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body.sg{
+  background-image: url('bg-sg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body.glass::before{
+	background-image: url('login-bg.jpg');
+	-webkit-filter: url('#blur');
+	filter: url('#blur');
+	-webkit-filter: blur(10px);
+	filter: blur(10px);
+	background-size: cover;
+	opacity: 0.2;
+}
+.glass {
+  background-color: white;
+}	
