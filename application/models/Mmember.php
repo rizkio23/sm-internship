@@ -12,7 +12,7 @@ class Mmember extends MY_Model {
     {
         $con['tabel']  = 'tb_member';
         $con['join']   = array('tb_jenis'=>'tb_member.id_jenis = tb_jenis.id', 'tb_bidang'=>'tb_member.id_bidang = tb_bidang.id');
-        $con['select'] = "tb_member.id, nama, instansi, alamat, jurusan, bagian, jenis, durasi, tujuan, bulan_pengajuan, email, hp";
+        $con['select'] = "tb_member.id, nama, instansi, alamat, jurusan, bagian, id_jenis, jenis, durasi, tujuan, bulan_pengajuan, email, hp";
         $con['where']  = array('tb_member.id'=>$id);
         
         return $this->get($con)->result_array();

@@ -19,7 +19,7 @@ class Testing extends MY_Controller {
 	{
 		$this->load->view('example/head');
 		$this->load->view('example/side');
-		$this->load->view('dashboard/vmenu-penilaian-detail');
+		$this->load->view('dashboard/vmenu-berkas-admin');
 		$this->load->view('example/foot');
 	}
 

@@ -147,13 +147,6 @@ class Member extends MY_Controller
 	{
 
 		#--------------------------------------------------------------------------
-		# Melakukan pengecekan apakah POST terkirim
-		# Data refrensi tidak kosong dan refrensi DIRECT sesuai.
-		#--------------------------------------------------------------------------
-		if (!empty($_POST) && !empty($_GET['ref']) && password_verify('editProfil', $_GET['ref']))
-		{
-
-		#--------------------------------------------------------------------------
 		# Melakukan pengecekan jika VALUE dari tombol 'TB' memiliki nilai
 		# Kemudian mengecek jika data POST terkirim dari FORM yang sesuai.
 		#--------------------------------------------------------------------------
@@ -193,18 +186,6 @@ class Member extends MY_Controller
 		# Melakukan pengecekan jika VALUE dari tombol 'TB' tidak memiliki nilai
 		# Kemudian mengecek jika data POST terkirim dari FORM yang tidak sesuai.
 		# Membuat pesan Kesalahan dan diarahkan ke HALAMAN PROFIL
-		#--------------------------------------------------------------------------
-		{
-		$this->pesan('pesan', 'Terdapat kesalahan');
-		redirect(base_url().'dashboard/profil');
-		}
-		}
-
-		else
-
-		#--------------------------------------------------------------------------
-		# Pengecekan Data refrensi kosong dan refrensi DIRECT tidak sesuai.
-		# Membuat pesan KESALAHAN dan akan diarahkan ke HALAMAN PROFIL
 		#--------------------------------------------------------------------------
 		{
 		$this->pesan('pesan', 'Terdapat kesalahan');

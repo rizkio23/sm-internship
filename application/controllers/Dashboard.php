@@ -627,7 +627,7 @@ class Dashboard extends MY_Controller
 		$data['data'] 		= $this->Mmember->get_pengajuan_unit();
 		// print_r($data['data']);
 		$data['revisi'] 	= $this->Mmember->get_revisi_unit();
-		$data['unit_kerja']	= $this->Mmember->get(array('tabel'=>'tb_unitkerja'))->result_array();
+		$data['unit_kerja']	= $this->Mmember->get(array('tabel'=>'tb_unitkerja', 'order_by'=>'deskripsi ASC'))->result_array();
 		$this->init('vmenu-daftar-pengajuan-diklat', $data);
 	}
 
@@ -686,7 +686,9 @@ class Dashboard extends MY_Controller
 
 	public function berkas_diklat()
 	{
-		$this->init('vmenu-berkas-diklat');
+		$this->load->model('Mberkas');
+		$data['data'] = $this->Mberkas->get_dokumen();
+		$this->init('vmenu-berkas-admin', $data);
 	}
 
 	public function berkas_member()

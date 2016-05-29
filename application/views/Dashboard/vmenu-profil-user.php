@@ -29,7 +29,7 @@
           <!-- PORTLET BODY -->
           <div class="portlet-body form">
             <!-- BEGIN FORM -->
-            <form class="form-horizontal" role="form" method="POST" action="<?=base_url()?>P/Admin/update_profil/">
+            <form class="form-horizontal" role="form" method="POST" action="<?=base_url()?>P/Member/update/">
               <div class="form-body">
                 <div class="form-group">
                   <label class="col-md-2 control-label">ID</label>
@@ -94,7 +94,7 @@
               <div class="form-actions">
                 <div class="row">
                   <div class="col-md-offset-2 col-md-9">
-                    <input type="submit" class="btn btn-primary" name="btn" value="Submit">
+                    <input type="submit" class="btn btn-primary" name="tb" value="Save">
                     <button type="button" class="btn btn-danger">Batal</button>
                   </div>
                 </div>

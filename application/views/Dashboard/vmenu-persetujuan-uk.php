@@ -132,6 +132,21 @@
 
 
 <script type="text/javascript">
+  // Autocomplete
+  $(function()
+  {
+    var unitKerja = [
+      "Asem",
+      "Anjing",
+      "Bau",
+      "Beleken"
+    ];
+    $("#auto").autocomplete(
+      {
+        source: unitKerja
+      }
+    );
+  });
 
   var no = null;
 

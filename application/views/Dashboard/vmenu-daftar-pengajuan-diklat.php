@@ -153,11 +153,10 @@
                     </td>
                     <td class="center">
                       <select class="form-control" name="unit_kerja" id="unit<?=$no?>" onchange="ambil('<?=$no?>')">
-                        <option value="">Pilih Unit Kerja</option>
                         <?php foreach ($unit_kerja as $key):?>
                           <option value="<?=$key['id']?>"><?=ucwords(strtolower($key['deskripsi']))?></option>
-                      <?php endforeach; ?>
-                      </select>
+                        <?php endforeach; ?>
+
                     </td>
                     <td class="center">
                       <select class="form-control" name="pembina" id="pembina<?=$no?>"></select>

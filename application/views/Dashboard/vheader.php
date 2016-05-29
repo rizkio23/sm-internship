@@ -17,7 +17,7 @@
   <link href="<?php echo base_url().'assets/plugin/js/datatables/plugins/bootstrap/dataTables.bootstrap.css';?>" rel="stylesheet" type="text/css"/>
   <link rel="icon" type="image/png" href="<?php echo base_url().'assets/img/favicon-32x32.png';?>" sizes="32x32">
   <link rel="icon" type="image/png" href="<?php echo base_url().'assets/img/favicon-16x16.png';?>" sizes="16x16">
-  <script src="<?php echo base_url().'assets/plugin/js/jquery-2.2.3.min';?>"></script>
+  <script src="<?php echo base_url().'assets/plugin/js/jquery-2.1.4.js';?>"></script>
   <script src="<?php echo base_url().'assets/plugin/js/jquery.cokie.min.js';?>"></script>
 
 </head>

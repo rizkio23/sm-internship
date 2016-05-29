@@ -55,7 +55,7 @@ class Pdf extends MY_Controller
 		$this->load->model('Mmember');
 
 		$header  = array('ID PESERTA', 'NAMA', 'INSTANSI', 'JENIS', 'BIDANG', 'TUJUAN', 'STATUS');
-		$colSize = array(40, 60, 40, 30, 60, 20, 25);
+		$colSize = array(40, 60, 75, 30, 60, 20, 25);
 
 		$param = NULL;
 
@@ -89,7 +89,7 @@ class Pdf extends MY_Controller
 	    // MULAI MEMBUAT PDF
 	    $no = 0;
 
-	    $this->load->library('fpdf', array('orientation'=>'L','size'=>'A4'));
+	    $this->load->library('fpdf', array('orientation'=>'L','size'=>'Legal'));
 	    $this->fpdf->AddPage();
 	    $this->fpdf->header();
 

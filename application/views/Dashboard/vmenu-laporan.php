@@ -4,7 +4,7 @@
     <!-- BEGIN PAGE TITLE -->
     <div class="page-title dash">
       <h3>Laporan</h3>
-    </div> 
+    </div>
     <!-- END OF PAGE TITLE -->
 
     <!-- BEGIN BREADCRUMB -->
@@ -15,7 +15,7 @@
     <!-- END OF BREADCRUMB -->
 
     <div class="row">
-  
+
      <!-- BEGIN PORTLET -->
       <div class="col-md-12">
         <div class="portlet box yellow-crusta">
@@ -32,13 +32,13 @@
             <div class="table-toolbar">
               <div class="row">
                 <form method="GET" action="<?=base_url()?>dashboard/report">
-                  <div class="col-md-11">            
+                  <div class="col-md-11">
                     <div class="filter-table ">
                       <label class="control-label">Tahun:</label>
-                        <select style="width:60px;height:30px" name="tahun">
+                        <select style="width:75px;height:30px" name="tahun">
                           <option value="all" selected>Semua</option>
                           <?php
-                            $now = date('Y'); 
+                            $now = date('Y');
                             for($i = 2010; $i <= $now; $i++)
                             {
                               if ($filter['tahun']==$i)
@@ -46,7 +46,7 @@
                                 echo "<option value='$i' selected>$i</option>";
                                 continue;
                               }
-                              
+
                               echo "<option value='$i'>$i</option>";
                             }
                           ?>
@@ -59,7 +59,7 @@
                           <?php
                               for($i=1; $i<=12; $i++)
                               {
-                                if ($filter['bulan']==$i) 
+                                if ($filter['bulan']==$i)
                                 {
                                   echo "<option value='$i' selected>".date('F', strtotime("2000-$i-2"))."</option>";
                                 }
@@ -71,7 +71,7 @@
                     </div>
                     <div class="filter-table">
                       <label class="control-label">Status:</label>
-                        <select style="width:100px;height:30px" name="status">
+                        <select style="width:180px;height:30px" name="status">
                           <option value="all" selected>Semua</option>
                           <option value="1" <?=($filter['status']==1)?'selected':''?> >Menunggu</option>
                           <option value="2" <?=($filter['status']==2)?'selected':''?> >Pengajuan Pembina</option>
@@ -83,17 +83,17 @@
                   <div class="col-md-1">
                     <div class="btn-group pull-right">
                     <input type="submit" class="btn btn-success" name="tb" value="Filter">
-                    </div>                  
-                  </div>  
-                </form>  
+                    </div>
+                  </div>
+                </form>
                 <div class="col-md-12">
                   <hr>
                 </div>
                 <div class="col-md-12">
                   <div class="pull-right">
                     <label class="control-label" style="font-size:17px;">Cetak Sebagai</label>
-                    <a href="" class="btn btn-sm green-jungle">Excel <i class="fa fa-file-excel-o"></i></a>
-                    <a href="<?=base_url()?>p/pdf/report?tahun=<?=$filter['tahun']?>&bulan=<?=$filter['bulan']?>&status=<?=$filter['status']?>" class="btn btn-sm red-flamingo">PDF <i class="fa fa-file-pdf-o"></i></a>
+                    <a href="<?=base_url()?>p/excel/report?tahun=<?=$filter['tahun']?>&bulan=<?=$filter['bulan']?>&status=<?=$filter['status']?>" class="btn btn-sm green-jungle">Excel <i class="fa fa-file-excel-o"></i></a>
+                    <a href="<?=base_url()?>p/pdf/report?tahun=<?=$filter['tahun']?>&bulan=<?=$filter['bulan']?>&status=<?=$filter['status']?>" class="btn btn-sm red-flamingo" target="_blank">PDF <i class="fa fa-file-pdf-o"></i></a>
                   </div>
                 </div>
               </div>
@@ -110,7 +110,7 @@
                   <th class="center">Bidang</th>
                   <th class="center">Tujuan</th>
                   <th class="center">Status</th>
-                </tr> 
+                </tr>
               </thead>
               <tbody>
               <?php foreach($data as $key): ?>
@@ -147,14 +147,14 @@
               </tbody>
             </table>
             <!-- END OF TABLE -->
-          </div>  
+          </div>
           <!-- END PORTLET BODY -->
-        </div>  
-      </div>     
+        </div>
+      </div>
       <!-- END OF PORTLET -->
       </div>
       <!-- END OF ROW -->
-    </div>  
+    </div>
     <!-- END OF CONTENT -->
-  </div>  
+  </div>
   <!-- END OF PAGE -->
