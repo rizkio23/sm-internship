@@ -16,10 +16,6 @@ class Mkuota extends MY_Model {
     	return $this->get(array('tabel'=>'tb_kuota', 'order_by'=>'tahun ASC'))->result_array();
     }
 
-    public function get_kuota_tahun_detail($tahun){
-        return $this->get(array('tabel'=>'tb_kuota_bulan','where'=>array('tahun'=>$tahun), 'order_by'=>'bulan ASC'))->result_array();
-    }
-
     public function get_kuota_detail($tahun, $id_bidang)
     {
         $con['tabel'] = 'tb_kuota_bidang';

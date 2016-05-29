@@ -759,7 +759,7 @@ class Dashboard extends MY_Controller
 	public function kuota_detail()
 	{
 		$this->load->model("Mkuota");
-		$temp = $this->Mkuota->get_kuota_tahun_detail($_GET['tahun']);
+		$temp = $this->Mkuota->get_kuota_detail($_GET['tahun']);
 
 		foreach ($temp as $key) {
 			$data['data'][$key['bulan']] = $key['kuota'];
