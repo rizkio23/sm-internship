@@ -20,61 +20,71 @@
     <div class="col-md-12 col-xs-12">
 
       <!-- TABEL TEKNIS -->
-        <div class="portlet light">
-          <div class="portlet-title">
-            <div class="caption font-red-thunderbird">
-              <i class="fa fa-lg fa-plus-circle font-red-thunderbird"></i>
-              <span class="caption-subject bold uppercase"> Nilai Teknis</span>
-            </div>
-            <div class="pull-right">
-              <a href="" ><button class="btn red-thunderbird"><i class="glyphicon glyphicon-plus"></i> Tambah Nilai</button></a>
-            </div>
+      <div class="portlet light">
+        <div class="portlet-title">
+          <div class="caption font-red-thunderbird">
+            <i class="fa fa-lg fa-plus-circle font-red-thunderbird"></i>
+            <span class="caption-subject bold uppercase"> Nilai Teknis</span>
           </div>
-            <thead>
-              <table class="table table-striped">
-                <tr>
-                  <th class="center">No</th>
-                  <th class="center">ID Member</th>
-                  <th class="center">Nama</th>
-                  <th class="center">Unit</th>
-                  <th class="center">Bidang</th>
-                  <th class="center">Jenis Kegiatan</th>
-                  <th class="center">Jumlah Jam</th>
-                  <th class="center">Nilai</th>
-                </tr>
-            </table>
-            </thead>
+          <div class="pull-right">
+            <a href="#nTeknis" data-toggle="modal" ><button class="btn red-thunderbird" data-toggle="modal"><i class="glyphicon glyphicon-plus"></i> Tambah Nilai</button></a>
+          </div>
         </div>
+        <thead>
+          <table class="table table-striped">
+            <tr>
+              <th class="center">No</th>
+              <th class="center">ID Member</th>
+              <th class="center">Nama</th>
+              <th class="center">Unit</th>
+              <th class="center">Bidang</th>
+              <th class="center">Jenis Kegiatan</th>
+              <th class="center">Jumlah Jam</th>
+              <th class="center">Nilai</th>
+            </tr>
+            <tr>
+              <td class="center"></td>
+              <td class="center"></td>
+              <td class="center"></td>
+              <td class="center"></td>
+              <td class="center"></td>
+              <td class="center"></td>
+              <td class="center"></td>
+              <td class="center"></td>
+            </tr>
+          </table>
+        </thead>
+      </div>
       <!-- END TABEL TEKNIS -->
 
       <!-- TABEL NON TEKNIS -->
-        <div class="portlet light">
-          <div class="portlet-title">
-            <div class="caption font-red-thunderbird">
-              <i class="fa fa-lg fa-plus-circle font-red-thunderbird"></i>
-              <span class="caption-subject bold uppercase"> Nilai Non Teknis</span>
-            </div>
-            <div class="pull-right">
-              <a href="" ><button class="btn red-thunderbird"><i class="glyphicon glyphicon-plus"></i> Tambah Nilai</button></a>
-            </div>
+      <div class="portlet light">
+        <div class="portlet-title">
+          <div class="caption font-red-thunderbird">
+            <i class="fa fa-lg fa-plus-circle font-red-thunderbird"></i>
+            <span class="caption-subject bold uppercase"> Nilai Non Teknis</span>
           </div>
-            <thead>
-              <table class="table table-striped">
-                <tr>
-                  <th class="center" width="50" style="font-size:13px">No</th>
-                  <th class="center" style="font-size:13px">ID Member</th>
-                  <th class="center" style="font-size:13px">Nama</th>
-                  <th class="center" style="font-size:13px">Unit Kerja</th>
-                  <th class="center" style="font-size:13px">Bidang</th>
-                  <th class="center"  style="font-size:13px">Disiplin</th>
-                  <th class="center"  style="font-size:13px">Kerjasama</th>
-                  <th class="center"  style="font-size:13px">Inisiatif</th>
-                  <th class="center" width="50" style="font-size:13px">Tanggung Jawab</th>
-                  <th class="center"  style="font-size:13px">Keberhasilan</th>
-                </tr>
-            </table>
-            </thead>
+          <div class="pull-right">
+            <a href="#nNonTeknis" data-toggle="modal"><button class="btn red-thunderbird"><i class="glyphicon glyphicon-plus"></i> Tambah Nilai</button></a>
+          </div>
         </div>
+        <thead>
+          <table class="table table-striped">
+            <tr>
+              <th class="center" width="50" style="font-size:13px">No</th>
+              <th class="center" style="font-size:13px">ID Member</th>
+              <th class="center" style="font-size:13px">Nama</th>
+              <th class="center" style="font-size:13px">Unit Kerja</th>
+              <th class="center" style="font-size:13px">Bidang</th>
+              <th class="center"  style="font-size:13px">Disiplin</th>
+              <th class="center"  style="font-size:13px">Kerjasama</th>
+              <th class="center"  style="font-size:13px">Inisiatif</th>
+              <th class="center" width="50" style="font-size:13px">Tanggung Jawab</th>
+              <th class="center"  style="font-size:13px">Keberhasilan</th>
+            </tr>
+          </table>
+        </thead>
+      </div>
       <!-- END TABEL NON TEKNIS -->
 
       <!-- NILAI -->
@@ -95,3 +105,153 @@
   </div>
 </div>
 <!-- END OF PAGE -->
+
+
+<!-- BEGIN MODAl NILAI TEKNIS-->
+<div id="nTeknis" class="modal fade" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+        <h4 class="modal-title"><span><i class="fa fa-plus"></i></span> Input Nilai Teknis</h4>
+      </div>
+      <!-- BEGIN FORM  -->
+      <form action="" role="form" method="POST">
+
+        <!-- BEGIN MODAL BODY -->
+        <div class="modal-body">
+          <div style="height:350px" data-always-visible="1" data-rail-visible="1">
+
+            <div class="form-body">
+
+              <div class="form-group">
+                <label>ID Member</label>
+                <input type="text" class="form-control" name="id" readonly="">
+              </div>
+
+              <div class="form-group">
+                <label>Nama</label>
+                <input type="text" class="form-control" name="nama" readonly>
+              </div>
+
+              <div class="form-group">
+                <label>Jumlah Jam</label>
+                <input type="text" class="form-control" name="jam" readonly>
+              </div>
+
+              <div class="form-group">
+                <label>Nilai</label>
+              </div>
+              <div class="form-group">
+                <select style="padding: 6px 16px;">
+                  <option>A</option>
+                  <option>B</option>
+                  <option>C</option>
+                  <option>D</option>
+                </select>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- END OF MODAL BODY -->
+
+        <!-- BEGIN MODAL FOOTER -->
+        <div class="modal-footer">
+          <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+          <input type="submit" class="btn btn-success" name="tb" class="btn btn-primary" value="add">
+        </div>
+        <!-- END OF MODAL FOOTER -->
+      </form>
+      <!-- ENF OF FORM -->
+    </div>
+  </div>
+</div>
+<!-- END MODAL NILAI TEKNIS -->
+
+
+<!-- BEGIN MODAl NILAI TEKNIS-->
+<div id="nNonTeknis" class="modal fade" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+        <h4 class="modal-title"><span><i class="fa fa-plus"></i></span> Input Nilai Non Teknis</h4>
+      </div>
+      <!-- BEGIN FORM  -->
+      <form action="" role="form" method="POST">
+
+        <!-- BEGIN MODAL BODY -->
+        <div class="modal-body">
+          <div style="height:280px" data-always-visible="1" data-rail-visible="1">
+
+            <div class="form-body">
+
+              <div class="form-group">
+                <label>ID Member</label>
+                <input type="text" class="form-control" name="id" readonly="">
+              </div>
+
+              <div class="form-group">
+                <label>Nama</label>
+                <input type="text" class="form-control" name="nama" readonly>
+              </div>
+
+              <div class="form-group">
+                <label>Disiplin</label>
+                <select style="padding: 6px 16px;">
+                  <option>A</option>
+                  <option>B</option>
+                  <option>C</option>
+                  <option>D</option>
+                </select>
+                <label style="margin-left:20px">Kerjasama</label>
+                <select style="padding: 6px 16px;">
+                  <option>A</option>
+                  <option>B</option>
+                  <option>C</option>
+                  <option>D</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>Inisiatif</label>
+                <select style="padding: 6px 16px;">
+                  <option>A</option>
+                  <option>B</option>
+                  <option>C</option>
+                  <option>D</option>
+                </select>
+                <label style="margin-left:20px">Tanggung Jawab</label>
+                <select style="padding: 6px 16px;">
+                  <option>A</option>
+                  <option>B</option>
+                  <option>C</option>
+                  <option>D</option>
+                </select>
+                <label style="margin-left:20px">Keberhasilan</label>
+                <select style="padding: 6px 16px;">
+                  <option>A</option>
+                  <option>B</option>
+                  <option>C</option>
+                  <option>D</option>
+                </select>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- END OF MODAL BODY -->
+
+        <!-- BEGIN MODAL FOOTER -->
+        <div class="modal-footer">
+          <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+          <input type="submit" class="btn btn-success" name="tb" class="btn btn-primary" value="add">
+        </div>
+        <!-- END OF MODAL FOOTER -->
+      </form>
+      <!-- ENF OF FORM -->
+    </div>
+  </div>
+</div>
+<!-- END MODAL NILAI NON TEKNIS -->
