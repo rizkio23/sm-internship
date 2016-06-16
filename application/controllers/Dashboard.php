@@ -821,7 +821,8 @@ class Dashboard extends MY_Controller
 	{
 		if (isset($_GET) && ! empty($_GET['id']))
 		{
-			$this->load->Model('Mmember');
+			$this->load->model('Mmember');
+			$this->load->model('Mberkas');
 
 			$data['biodata'] = $this->Mmember->get_profil($_GET['id']);
 
@@ -829,9 +830,11 @@ class Dashboard extends MY_Controller
 				 show_404();
 			}
 
+			$data['id'] 	 = $_GET['id'];
 			$data['biodata'] = $data['biodata'][0];
 			$data['anggota'] = $this->Mmember->get_member($_GET['id']);
 			$data['unit']	 = $this->Mmember->get_member_magang($_GET['id']);
+			$data['berkas']	 = $this->Mberkas->get_berkas($_GET['id']);
 
 			$this->init('vmenu-kelompok-detail', $data);
 		}
@@ -869,7 +872,7 @@ class Dashboard extends MY_Controller
 		$this->load->model('Mmember');
 
 		$data['filter'] = array('tahun'=>'all', 'bulan'=>'all', 'status'=>'all');
-
+		$param=array();
 		if (! empty($_GET))
 		{
 			if (isset($_GET['tahun']) && !empty($_GET['tahun']) && $_GET['tahun'] != 'all')
@@ -898,6 +901,15 @@ class Dashboard extends MY_Controller
 		}
 
 		$this->init('vmenu-laporan', $data);
+	}
+
+	public function kelompok()
+	{
+		$this->load->model('Mmember');
+		$data['member'] = $this->Mmember->get_pengajuan_member();
+		// print_r($data['member']);
+
+		$this->init('vmenu-kelompok', $data);
 	}
 }
 

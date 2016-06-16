@@ -96,11 +96,17 @@
                     <a href="<?=base_url()?>p/pdf/report?tahun=<?=$filter['tahun']?>&bulan=<?=$filter['bulan']?>&status=<?=$filter['status']?>" class="btn btn-sm red-flamingo" target="_blank">PDF <i class="fa fa-file-pdf-o"></i></a>
                   </div>
                 </div>
+                <div class="col-md-12">
+                  <hr>
+                  <div class="pull-right">
+                    <a href="<?=base_url()?>p/berkas/absensi" class="btn yellow">Cetak Absensi</a>
+                  </div>
+                </div>
               </div>
             </div>
             <!-- END TABLE TOOLBAR -->
             <!-- BEGIN TABLE -->
-            <table class="table table-striped table-bordered table-hover">
+            <table class="table table-striped table-bordered table-hover" id="delapan">
               <thead>
                 <tr>
                   <th class="center">ID</th>
@@ -109,6 +115,7 @@
                   <th class="center">Jenis</th>
                   <th class="center">Bidang</th>
                   <th class="center">Tujuan</th>
+                  <th class="center">Bulan</th>
                   <th class="center">Status</th>
                 </tr>
               </thead>
@@ -116,11 +123,12 @@
               <?php foreach($data as $key): ?>
                 <tr>
                   <td class="center" width="50"><?=$key['id_user']?></td>
-                  <td class="center"><?=$key['nama']?></td>
-                  <td class="center"><?=$key['instansi']?></td>
-                  <td class="center"><?=$key['jenis']?> (<?=$key['durasi']?> Bulan)</td>
-                  <td class="center"><?=$key['bagian']?></td>
-                  <td class="center"><?=strtoupper($key['tujuan'])?></td>
+                  <td><?=$key['nama']?></td>
+                  <td><?=$key['instansi']?></td>
+                  <td><?=$key['jenis']?> (<?=$key['durasi']?> Bulan)</td>
+                  <td><?=$key['bagian']?></td>
+                  <td><?=strtoupper($key['tujuan'])?></td>
+                  <td><?=date('F Y', strtotime($key['bulan_pengajuan']))?></td>
                   <td class="center">
                     <?php
                   switch ($key['status']) {

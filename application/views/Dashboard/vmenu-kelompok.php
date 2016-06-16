@@ -4,7 +4,7 @@
 	    <!-- BEGIN PAGE TITLE -->
 	    <div class="page-title dash">
 	      <h3>Kelompok</h3>
-	    </div> 
+	    </div>
 	    <!-- END OF PAGE TITLE -->
 
 	    <!-- BEGIN BREADCRUMB -->
@@ -27,104 +27,71 @@
 	          <!-- END PORTLET TITLE -->
 	          <!-- PORTLET BODY -->
 	          <div class="portlet-body">
-	            <!-- TABLE TOOLBAR -->
-	            <div class="table-toolbar">
-	            <!-- BEGIN FILTER -->
-	            <div class="row">
-	              <form method="GET" action="">
-	                <div class="col-md-11">            
-	                  <div class="filter-table ">
-	                    <label class="control-label">Bidang:</label>
-	                      <select style="width:130px;height:30px" name="bidang">
-	                        <option value="0">Semua</option>
-	                      </select>
-	                  </div>	                
-
-	                  <div class="filter-table">
-	                    <label class="control-label">Tahun:</label>
-	                      <select style="width:130px;height:30px" name="bidang">
-	                        <option value="0">Semua</option>
-	                      </select>
-	                  </div>
-	                </div>
-
-	                <div class="col-md-12">
-	                	<div class="filter-table ">
-	                	  <label class="control-label">Tujuan:</label>
-	                	    <select style="width:130px;height:30px" name="bidang">
-	                	      <option value="0">Semua</option>
-	                	    </select>
-	                	</div>
-
-	                	<div class="filter-table ">
-	                	  <label class="control-label">Bulan:</label>
-	                	    <select style="width:130px;height:30px" name="bidang">
-	                	      <option value="0">Semua</option>
-	                	    </select>
-	                	</div>
-
-	                	<div class="filter-table ">
-	                	  <label class="control-label">Status:</label>
-	                	    <select style="width:130px;height:30px" name="bidang">
-	                	      <option value="0">Diterima</option>
-	                	      <option value="0">Tidak Diterima</option>
-	                	    </select>
-	                	</div>
-
-	                	<div class="btn-group pull-right">
-	                		<input type="submit" class="btn btn-success" name="tb" value="Filter">
-	                	</div>
-	                </div>
-	              </form>
-	            </div>  
-	            <!-- END OF FILTER  -->
-	            </div>
-	            <!-- END TABLE TOOLBAR -->
-	            <hr>
 	            <!-- BEGIN TABLE -->
-	            <table class="table table-hover table-bordered" id="kel">
+	            <table class="table table-hover table-bordered" id="tujuh">
 	            	<thead>
 	            		<tr>
 	            			<th class="center">Nomer Pendaftaran</th>
 	            			<th class="center">Instansi</th>
-	            			<th class="center">Jurusan</th>
 	            			<th class="center">Bidang Diajukan</th>
 	            			<th class="center">Tujuan</th>
-	            			<th class="center">Bulan</th>
-	            			<th class="center">Tahun</th>
+	            			<th class="center">Bulan Pengajuan</th>
 	            			<th class="center">Jumlah Anggota</th>
 	            			<th class="center">Status</th>
 	            			<th class="center">Aksi</th>
 	            		</tr>
 	            	</thead>
 	            	<tbody>
+	            	<?php foreach($member as $key): ?>
 	            		<tr>
-	            			<td class="center"></td>
-	            			<td class="center"></td>
-	            			<td class="center"></td>
-	            			<td class="center"></td>
-	            			<td class="center"></td>
-	            			<td class="center"></td>
-	            			<td class="center"></td>
-	            			<td class="center"></td>
-	            			<td class="center"><span class="label label-success">Diterima</span></td>
+	            			<td class="center"><?=$key['id']?></td>
+	            			<td class="center"><?=$key['instansi']?></td>
+	            			<td class="center"><?=$key['bagian']?></td>
+	            			<td class="center"><?=$key['jenis']?> (<?=$key['durasi']?> bulan)</td>
+	            			<td class="center"><?=date('F Y', strtotime($key['bulan_pengajuan']))?></td>
+	            			<td class="center"><?=$key['jumlah']?></td>
 	            			<td class="center">
-	            				<a href="">
-	            				  <button class="btn btn-xs blue-stripe">Detail</button>
-	            				</a>
-	            			</td>
+			                <?php
+			                switch ($key['status']) {
+			                  case 1:
+			                      echo "<label class='label label-sm label-default'>Menunggu</label>";
+			                      break;
+			                  case 2:
+			                      echo "<label class='label label-sm label-success'>Menunggu</label>";
+			                      break;
+			                  case 3:
+			                      echo "<label class='label label-sm label-success'>Disetujui</label>";
+			                      break;
+			                  case 0:
+			                      echo "<label data-toggle='modal' href='#tolak' class='label label-sm label-danger'>Ditolak</label>";
+			                      break;
+			                  case -1:
+			                      echo "<label class='label label-sm label-default'>draft</label>";
+			                      break;
+			                  default:
+			                      echo "<label class='label label-sm label-danger'>ERROR</label>";
+			                      break;
+			                  }
+			                ?>
+			                </td>
+                  			<td class="center">
+                  				<a href="<?=base_url()?>dashboard/kelompok_detail?id=<?=$key['id']?>" target="_blank">
+			                      <button class="btn btn-xs btn-warning btn-icon"><i class="fa fa-list"></i></button>
+			                    </a>
+                  			</td>
 	            		</tr>
+	            	<?php endforeach; ?>
 	            	</tbody>
 	            </table>
 	            <!-- END OF TABLE -->
-	          </div>  
+	          </div>
 	          <!-- END PORTLET BODY -->
-	        </div>  
-	      </div>     
+	        </div>
+	      </div>
 	      <!-- END OF PORTLET -->
 	    </div>
 	    <!-- END OF ROW -->
-	  </div>  
+	  </div>
 	  <!-- END OF CONTENT -->
-	</div>  
+	</div>
 	<!-- END OF PAGE -->

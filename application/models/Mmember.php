@@ -38,7 +38,7 @@ class Mmember extends MY_Model {
     public function get_report($param=NULL)
     {
         $con['tabel']   = 'tb_member_user';
-        $con['select']  = "id_user, foto, tb_member_user.nama, jk, instansi, tgl_lahir, email, tb_member_user.hp, tb_member_user.alamat, jurusan, jenis, durasi, tujuan, bagian, tb_member_user.status";
+        $con['select']  = "id_user, foto, tb_member_user.nama, jk, instansi, tgl_lahir, email, tb_member_user.hp, tb_member_user.alamat, jurusan, jenis, durasi, tujuan, bagian, tb_member_user.status, bulan_pengajuan";
         $con['join']    = array('tb_member'=>'tb_member_user.id_user = tb_member.id', 'tb_jenis'=>'tb_member.id_jenis = tb_jenis.id', 'tb_bidang'=>'tb_member.id_bidang = tb_bidang.id');
         $con['order_by']= "id_user ASC";
         $con['where']   = "tb_member_user.status > -1 ";
@@ -592,6 +592,15 @@ public function get_pengajuan_unit()
         }
 
         return 1;
+    }
+
+    public function get_absen()
+    {
+        $con['tabel']  = "tb_member_user";
+        $con['select'] = "id_user, tb_member_user.nama as nama, instansi, durasi";
+        $con['join']   = array('tb_member'=>'tb_member.id = tb_member_user.id_user', 'tb_jenis'=>'tb_member.id_jenis = tb_jenis.id');
+        $con['where']  = "EXTRACT(month FROM bulan_pengajuan) = EXTRACT(month FROM now()) AND status = 3";
+        return $this->get($con)->result_array();
     }
 
 }

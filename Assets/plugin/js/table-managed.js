@@ -423,6 +423,143 @@ var TableManaged = function () {
         });
     }
 
+    var tujuhT = function () {
+
+        var table = $('#tujuh');
+
+        table.dataTable({
+            "language": {
+
+                "aria": {
+                    "sortAscending": ": activate to sort column ascending",
+                    "sortDescending": ": activate to sort column descending"
+                },
+                "emptyTable": "No data available in table",
+                "info": "Showing _START_ to _END_ of _TOTAL_ entries",
+                "infoEmpty": "No entries found",
+                "infoFiltered": "(filtered1 from _MAX_ total entries)",
+                "lengthMenu": "Show _MENU_ entries",
+                "search": "Search:",
+                "zeroRecords": "No matching records found"
+            },
+
+            "bStateSave": true,
+
+            "columns": [{
+                "orderable": false
+            }, {
+                "orderable": false
+            }, {
+                "orderable": false
+            }, {
+                "orderable": false
+            }, {
+                "orderable": false
+            }, {
+                "orderable": false
+            }, {
+                "orderable": false
+            }, {
+                "orderable": false
+            }],
+            "lengthMenu": [
+                [5, 15, 20, -1],
+                [5, 15, 20, "All"] // change per page values here
+            ],
+            // set the initial value
+            "pageLength": 5,
+            "pagingType": "bootstrap_full_number",
+            "language": {
+                "search": "Cari User: ",
+                "lengthMenu": "  _MENU_ records",
+                "paginate": {
+                    "previous":"Prev",
+                    "next": "Next",
+                    "last": "Last",
+                    "first": "First"
+                }
+            },
+            "columnDefs": [{  // set default column settings
+                'orderable': true,
+                'targets': [0]
+            }, {
+                "searchable": false,
+                "targets": [1]
+            }],
+            "order": [
+                [1, "asc"]
+            ] // set first column as a default sort by asc
+        });
+    }
+
+    var delapanT = function () {
+
+        var table = $('#delapan');
+
+        table.dataTable({
+            "language": {
+
+                "aria": {
+                    "sortAscending": ": activate to sort column ascending",
+                    "sortDescending": ": activate to sort column descending"
+                },
+                "emptyTable": "No data available in table",
+                "info": "Showing _START_ to _END_ of _TOTAL_ entries",
+                "infoEmpty": "No entries found",
+                "infoFiltered": "(filtered1 from _MAX_ total entries)",
+                "lengthMenu": "Show _MENU_ entries",
+                "search": "Search:",
+                "zeroRecords": "No matching records found"
+            },
+
+            "bStateSave": true,
+
+            "columns": [{
+                "orderable": false
+            }, {
+                "orderable": false
+            }, {
+                "orderable": false
+            }, {
+                "orderable": false
+            }, {
+                "orderable": false
+            }, {
+                "orderable": false
+            }, {
+                "orderable": false
+            }],
+            "lengthMenu": [
+                [5, 15, 20, -1],
+                [5, 15, 20, "All"] // change per page values here
+            ],
+            // set the initial value
+            "pageLength": 5,
+            "pagingType": "bootstrap_full_number",
+            "language": {
+                "search": "Cari User: ",
+                "lengthMenu": "  _MENU_ records",
+                "paginate": {
+                    "previous":"Prev",
+                    "next": "Next",
+                    "last": "Last",
+                    "first": "First"
+                }
+            },
+            "columnDefs": [{  // set default column settings
+                'orderable': true,
+                'targets': [0]
+            }, {
+                "searchable": false,
+                "targets": [1]
+            }],
+            "order": [
+                [1, "asc"]
+            ] // set first column as a default sort by asc
+        });
+    }
+
+
     var berkasLaporan = function () {
 
         var table = $('#berkas');
@@ -572,6 +709,8 @@ var TableManaged = function () {
             initTable9();
             berkasLaporan();
             pengDiklat();
+            tujuhT();
+            delapanT();
         }
 
     };

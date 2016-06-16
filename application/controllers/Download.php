@@ -43,20 +43,20 @@ class Download extends MY_Controller
 		#--------------------------------------------------------------------------
 		# Melakukan Pengecekan apakah user sudah login 
 		#--------------------------------------------------------------------------
-		if ($this->isLogin())
-		{
+			if ($this->isLogin())
+			{
 
-		return call_user_func_array(array($this, $method), $param);
-		
-		}
+				return call_user_func_array(array($this, $method), $param);
 
-		else
+			}
+
+			else
 		#--------------------------------------------------------------------------
 		# Jika belum login maka akan diarahkan ke halaman LOGIN
 		#--------------------------------------------------------------------------
-		{
-		redirect(base_url().'home/login');
-		}
+			{
+				redirect(base_url().'home/login');
+			}
 		}
 
 		else
@@ -64,7 +64,7 @@ class Download extends MY_Controller
 		# Pengecekan pengambilan list menu tidak sesuai SESSION
 		#--------------------------------------------------------------------------
 		{
-		$this->index();
+			$this->index();
 		}
 	}
 
@@ -74,7 +74,7 @@ class Download extends MY_Controller
 	# ----------------------------------------------------------------------------
 	# Berfungsi untuk proses pengambilan data file untuk user dari database
 	# ----------------------------------------------------------------------------
-	public function user($file=NULL)
+	public function user($file=NULL, $id=NULL)
 	{
 
 		# ----------------------------------------------------------------------------
@@ -86,22 +86,29 @@ class Download extends MY_Controller
 		# ----------------------------------------------------------------------------
 		# Pengecekan jika FILE TIDAK KOSONG
 		# ----------------------------------------------------------------------------
-		if (isset($file) && !empty($file) && $file !== NULL)
-		{
+			if (isset($file) && !empty($file) && $file !== NULL)
+			{
 		# ----------------------------------------------------------------------------
 		# Proses download
 		# ----------------------------------------------------------------------------
-		force_download('./Documents/'.$this->user['id'].'/'.$file, NULL);
-		}
+				if ($id !== NULL) 
+				{
+					force_download('./Documents/'.$id.'/'.$file, NULL);
+				}
+				else
+				{
+					force_download('./Documents/'.$this->user['id'].'/'.$file, NULL);
+				}
+			}
 
-		else
+			else
 		# ----------------------------------------------------------------------------
 		# Pengecekan jika FILE KOSONG
 		# Menampilkan pesan ERROR
 		# ----------------------------------------------------------------------------
-		{
-		show_404();
-		}
+			{
+				show_404();
+			}
 		}
 
 		else
@@ -110,7 +117,7 @@ class Download extends MY_Controller
 		# Menampilkan PESAN ERROR
 		# ----------------------------------------------------------------------------
 		{
-		show_404();
+			show_404();
 		}
 	}
 
@@ -126,7 +133,7 @@ class Download extends MY_Controller
 		# ----------------------------------------------------------------------------
 		# Pengecekan jika FILE TIDAK KOSONG
 		# ----------------------------------------------------------------------------
-		force_download('./Documents/'.$id.'/'.$id.'_Proposal_magang.pdf', NULL);
+			force_download('./Documents/'.$id.'/'.$id.'_Proposal_magang.pdf', NULL);
 		}
 
 		else
@@ -135,7 +142,7 @@ class Download extends MY_Controller
 		# Menampilkan PESAN ERROR
 		# ----------------------------------------------------------------------------
 		{
-		show_404();
+			show_404();
 		}
 	}
 
@@ -150,7 +157,7 @@ class Download extends MY_Controller
 		# ----------------------------------------------------------------------------
 		# Pengecekan jika FILE TIDAK KOSONG
 		# ----------------------------------------------------------------------------
-		force_download('./Assets/documents/'.$_GET['fname'], NULL);
+			force_download('./Assets/documents/'.$_GET['fname'], NULL);
 		}
 
 		else
@@ -159,7 +166,7 @@ class Download extends MY_Controller
 		# Menampilkan PESAN ERROR
 		# ----------------------------------------------------------------------------
 		{
-		show_404();
+			show_404();
 		}
 	}
 }

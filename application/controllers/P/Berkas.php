@@ -244,5 +244,13 @@ class Berkas extends MY_Controller
 		show_404();
 		}
 	}
+
+	public function absensi()
+	{
+		$this->load->model('Mmember');
+		$data['data'] = $this->Mmember->get_absen();
+		$this->load->view('viewAbsen', $data);
+		// print_r($data['data']);
+	}
 }
 ?>

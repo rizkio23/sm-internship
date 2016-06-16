@@ -4,7 +4,7 @@
     <!-- BEGIN PAGE TITLE -->
     <div class="page-title dash">
       <h3>Detail Kelompok</h3>
-    </div> 
+    </div>
     <!-- END OF PAGE TITLE -->
     <div class="row">
       <!-- BEGIN PORTLET -->
@@ -44,7 +44,7 @@
                   </table>
                   <?php endforeach; ?>
                 </div>
-            </div> 
+            </div>
 
             <div class="form-group form-md-line-input">
               <div class="input-icon">
@@ -60,7 +60,7 @@
                   <label for="form_control_1">Jurusan</label>
                     <i class="fa fa-lg fa-flask"></i>
                 </div>
-            </div>  
+            </div>
 
             <div class="row">
               <div class="col-md-6">
@@ -70,7 +70,7 @@
                       <label for="form_control_1">Jenis</label>
                         <i class="fa fa-lg fa-tags"></i>
                     </div>
-                </div>              
+                </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group form-md-line-input">
@@ -79,7 +79,7 @@
                       <label for="form_control_1">Tujuan</label>
                         <i class="fa fa-lg fa-rocket"></i>
                     </div>
-                </div>                            
+                </div>
               </div>
             </div>
 
@@ -110,7 +110,7 @@
                       </div>
                       <label for="form_control_1">Status</label>
                     </div>
-                </div>              
+                </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group form-md-line-input">
@@ -121,12 +121,12 @@
                   </div>
                   <div class="input-icon">
                       <div><a href="<?=base_url()?>download/proposal/<?=$biodata['id'].'?ref='.PASSWORD_HASH(date('dmYh'), PASSWORD_BCRYPT)?>"><button class="btn btn-xs btn red-thunderbird btn-block btn-icon"><i class="fa fa-download"></i> Download</button></a></div>
-                  </div>                  
-                </div>                            
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>       
+        </div>
       </div>
       <!-- END OF PORTLET -->
 
@@ -147,7 +147,7 @@
                   <label for="form_control_1">Durasi Magang</label>
                     <i class="fa fa-lg fa-calendar-o"></i>
                 </div>
-            </div>              
+            </div>
           </div>
         </div>
       </div>
@@ -165,21 +165,65 @@
           <div class="form body">
 
             <div class="table-scrollable">
-              <table class="table table-bordered table-striped"> 
+              <table class="table table-bordered table-striped">
                 <thead>
+                  <tr class="danger">
+                    <th class="center">Nama</th>
+                    <th class="center">Deskripsi</th>
+                    <th class="center">Pembina</th>
+                  </tr>
+                </thead>
+                <tbody
                 <?php
-                  if (!empty($unit)) {
-                   foreach($unit as $data):?>
-                    <tr class="danger">
+                if (!empty($unit)) {
+                  foreach($unit as $data):?>
+                  <tr>
                     <td><?=$data['nama']?></td>
                     <td><?=$data['deskripsi']?></td>
                     <td><?=$data['pegawai']?></td>
-                    </tr>
+                  </tr>
                 <?php endforeach; }?>
-                </thead>
                 </tbody>
               </table>
-            </div>              
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END OF PORTLET -->
+
+      <!-- BEGIN PORTLET -->
+      <div class="col-md-6 col-xs-12 ">
+        <div class="portlet light">
+          <div class="portlet-title">
+            <div class="caption font-red-sunglo">
+              <i class="fa fa-lg fa-file-text font-red-sunglo"></i>
+              <span class="caption-subject bold uppercase"> Berkas Kelompok</span>
+            </div>
+          </div>
+          <div class="form body">
+
+            <div class="table-scrollable">
+              <table class="table table-bordered table-striped">
+                <thead>
+                  <tr class="danger">
+                    <th class="center">Nama Berkas</th>
+                    <th class="center">Kategori</th>
+                    <th class="center">Aksi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                <?php
+                  if (!empty($berkas)) {
+                   foreach($berkas as $data):?>
+                    <tr>
+                      <td><?=$data['nama_berkas']?></td>
+                      <td><?=$data['kategori']?></td>
+                      <td class="center"><a href="<?=base_url()?>download/user/<?=$data['file']?>/<?=$id?>?ref=<?=password_hash(date('dmYh'), PASSWORD_BCRYPT)?>"><label class='label label-sm label-warning'>Download</label></a></td>
+                    </tr>
+                <?php endforeach; }?>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
@@ -202,9 +246,9 @@
                     <textarea name="pesan" class="form-control" style="padding-left:0" placeholder="Tulis pesan disini.."></textarea>
                 </div>
                 <br>
-                <input class="btn btn green pull-right" type="Submit" value="Kirim">                
+                <input class="btn btn green pull-right" type="Submit" value="Kirim">
               </div>
-            </form>             
+            </form>
           </div>
         </div>
       </div>
@@ -218,9 +262,7 @@
 
     </div>
     <!-- END OF ROW -->
-  </div>  
+  </div>
   <!-- END OF CONTENT -->
-</div>  
+</div>
 <!-- END OF PAGE -->
-
-

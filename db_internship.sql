@@ -3,8 +3,8 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 28, 2016 at 09:29 AM
--- Server version: 5.6.16
+-- Generation Time: 16 Jun 2016 pada 05.58
+-- Versi Server: 5.6.16
 -- PHP Version: 5.5.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -23,7 +23,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_admin`
+-- Struktur dari tabel `tb_admin`
 --
 
 CREATE TABLE IF NOT EXISTS `tb_admin` (
@@ -42,20 +42,20 @@ CREATE TABLE IF NOT EXISTS `tb_admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_admin`
+-- Dumping data untuk tabel `tb_admin`
 --
 
 INSERT INTO `tb_admin` (`nip`, `password`, `level`, `status`, `logtime`, `created_date`, `updated_date`, `created_by`, `updated_by`, `deleted`) VALUES
 ('122410101033', '$2y$10$tx0C69iPAf9ShxWZ/ihgiekGAe6ZPae8ilrprKbaEF7ccBKQbbw36', 3, 1, '2016-04-23 03:01:25', '2016-04-20 00:00:00', NULL, '122410101086', NULL, 0),
-('122410101085', '$2y$10$QRqGrYmnM2Ctrt/kLvBmuegGGAg1sREX0f8B7mh1E/t9P2Z0BVShK', 2, 2, '2016-04-23 03:02:03', '2015-09-28 03:55:35', '2015-09-28 03:55:35', '122410101086', '122410101086', 0),
-('122410101086', '$2y$10$QRqGrYmnM2Ctrt/kLvBmuegGGAg1sREX0f8B7mh1E/t9P2Z0BVShK', 1, 1, '2016-04-23 12:35:06', '2015-09-23 08:39:12', '2015-09-23 08:39:12', '122410101086', '122410101086', 0),
-('122410101087', '$2y$10$TDgqTxpgHiWeZlvL.E7sYOuRpA6/jZBlKeo8URnWbHgpp0QbVMpVC', 3, 1, '2016-04-23 02:55:31', '2015-09-28 05:21:36', NULL, '122410101086', NULL, 0),
-('122410101099', '$2y$10$TDgqTxpgHiWeZlvL.E7sYOuRpA6/jZBlKeo8URnWbHgpp0QbVMpVC', 5, 1, '2016-04-23 02:52:40', '2015-09-28 06:53:07', NULL, '122410101086', NULL, 0);
+('122410101085', '$2y$10$QRqGrYmnM2Ctrt/kLvBmuegGGAg1sREX0f8B7mh1E/t9P2Z0BVShK', 2, 2, '2016-06-13 05:26:42', '2015-09-28 03:55:35', '2015-09-28 03:55:35', '122410101086', '122410101086', 0),
+('122410101086', '$2y$10$QRqGrYmnM2Ctrt/kLvBmuegGGAg1sREX0f8B7mh1E/t9P2Z0BVShK', 1, 1, '2016-06-13 05:15:53', '2015-09-23 08:39:12', '2015-09-23 08:39:12', '122410101086', '122410101086', 0),
+('122410101087', '$2y$10$TDgqTxpgHiWeZlvL.E7sYOuRpA6/jZBlKeo8URnWbHgpp0QbVMpVC', 3, 1, '2016-05-24 06:49:20', '2015-09-28 05:21:36', NULL, '122410101086', NULL, 0),
+('122410101099', '$2y$10$TDgqTxpgHiWeZlvL.E7sYOuRpA6/jZBlKeo8URnWbHgpp0QbVMpVC', 5, 1, '2016-06-13 05:16:18', '2015-09-28 06:53:07', NULL, '122410101086', NULL, 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_berkas`
+-- Struktur dari tabel `tb_berkas`
 --
 
 CREATE TABLE IF NOT EXISTS `tb_berkas` (
@@ -74,18 +74,22 @@ CREATE TABLE IF NOT EXISTS `tb_berkas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_berkas`
+-- Dumping data untuk tabel `tb_berkas`
 --
 
 INSERT INTO `tb_berkas` (`id`, `id_user`, `nama_berkas`, `kategori`, `file`, `created_date`, `updated_date`, `created_by`, `updated_by`, `deleted`) VALUES
 ('ber20160423023037', 'u20160423022930', 'Proposal Pengajuan Magang', 'proposal', 'u20160423022930_Proposal_magang.pdf', '2016-04-23 02:30:37', '2016-04-23 02:30:37', '', NULL, 0),
 ('ber20160423024518', 'u20160423024443', 'Proposal Pengajuan Magang', 'proposal', 'u20160423024443_Proposal_magang.pdf', '2016-04-23 02:45:18', '2016-04-23 02:45:18', '', NULL, 0),
-('ber20160423025145', 'u20160423025040', 'Proposal Pengajuan Magang', 'proposal', 'u20160423025040_Proposal_magang.pdf', '2016-04-23 02:51:45', '2016-04-23 02:51:45', '', NULL, 0);
+('ber20160423025145', 'u20160423025040', 'Proposal Pengajuan Magang', 'proposal', 'u20160423025040_Proposal_magang.pdf', '2016-04-23 02:51:45', '2016-04-23 02:51:45', '', NULL, 0),
+('ber20160524061445', 'u20160423024443', 'presensi kehadiran magang', 'presensi', 'u20160423024443_presensi.pdf', '2016-05-24 06:14:45', '2016-05-24 06:14:45', '', NULL, 0),
+('ber20160524063917', 'u20160524063625', 'PROPOSAL PENGAJUAN', 'proposal', 'u20160524063625_proposal.pdf', '2016-05-24 06:39:17', '2016-05-24 06:39:17', '', NULL, 0),
+('ber20160524071126', 'u20160524070952', 'PROPOSAL', 'proposal', 'u20160524070952_proposal.pdf', '2016-05-24 07:11:26', '2016-05-24 07:11:26', '', NULL, 0),
+('ber20160608053132', 'u20160524063625', 'Laporan', 'laporan', 'u20160524063625_laporan.pdf', '2016-06-08 05:31:32', '2016-06-08 05:31:32', '', NULL, 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_bidang`
+-- Struktur dari tabel `tb_bidang`
 --
 
 CREATE TABLE IF NOT EXISTS `tb_bidang` (
@@ -102,7 +106,7 @@ CREATE TABLE IF NOT EXISTS `tb_bidang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_bidang`
+-- Dumping data untuk tabel `tb_bidang`
 --
 
 INSERT INTO `tb_bidang` (`id`, `bagian`, `deskripsi`, `status`, `created_date`, `updated_date`, `created_by`, `updated_by`, `deleted`) VALUES
@@ -121,11 +125,11 @@ INSERT INTO `tb_bidang` (`id`, `bagian`, `deskripsi`, `status`, `created_date`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_dokumen`
+-- Struktur dari tabel `tb_dokumen`
 --
 
 CREATE TABLE IF NOT EXISTS `tb_dokumen` (
-  `id` mediumint(3) NOT NULL,
+  `id` mediumint(3) NOT NULL AUTO_INCREMENT,
   `nama` varchar(255) NOT NULL,
   `file` varchar(255) NOT NULL,
   `created_date` datetime NOT NULL,
@@ -134,22 +138,19 @@ CREATE TABLE IF NOT EXISTS `tb_dokumen` (
   `updated_by` varchar(50) DEFAULT NULL,
   `deleted` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
--- Dumping data for table `tb_dokumen`
+-- Dumping data untuk tabel `tb_dokumen`
 --
 
 INSERT INTO `tb_dokumen` (`id`, `nama`, `file`, `created_date`, `updated_date`, `created_by`, `updated_by`, `deleted`) VALUES
-(1, 'Kesehatan dan Keselamatan Lingkungan', 'k3.txt', '2015-09-29 00:00:00', NULL, '', NULL, 0),
-(2, 'Profil Perusahaan Semen Indonesia', 'profil.txt', '2015-09-29 00:00:00', NULL, '', NULL, 0),
-(3, 'Struktur Organisasi Perusahaan ', 'struktur.txt', '2015-09-29 00:00:00', NULL, '', NULL, 0),
-(4, 'Maps', 'maps.txt', '2015-09-29 00:00:00', NULL, '', NULL, 0);
+(1, 'absensi bulanan', 'absensi_bulanan.pdf', '2016-05-26 12:44:33', '2016-05-26 12:44:33', '', NULL, 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_hak_akses`
+-- Struktur dari tabel `tb_hak_akses`
 --
 
 CREATE TABLE IF NOT EXISTS `tb_hak_akses` (
@@ -167,10 +168,10 @@ CREATE TABLE IF NOT EXISTS `tb_hak_akses` (
   KEY `id_menu` (`id_menu`),
   KEY `level_2` (`level`),
   KEY `level_3` (`level`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=41 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=42 ;
 
 --
--- Dumping data for table `tb_hak_akses`
+-- Dumping data untuk tabel `tb_hak_akses`
 --
 
 INSERT INTO `tb_hak_akses` (`no`, `id_menu`, `level`, `priv`, `created_date`, `updated_date`, `created_by`, `updated_by`, `deleted`) VALUES
@@ -213,12 +214,13 @@ INSERT INTO `tb_hak_akses` (`no`, `id_menu`, `level`, `priv`, `created_date`, `u
 (37, 25, 5, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0),
 (38, 26, 4, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0),
 (39, 27, 2, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0),
-(40, 28, 5, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0);
+(40, 28, 5, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0),
+(41, 29, 5, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_instansi`
+-- Struktur dari tabel `tb_instansi`
 --
 
 CREATE TABLE IF NOT EXISTS `tb_instansi` (
@@ -232,7 +234,7 @@ CREATE TABLE IF NOT EXISTS `tb_instansi` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_jenis`
+-- Struktur dari tabel `tb_jenis`
 --
 
 CREATE TABLE IF NOT EXISTS `tb_jenis` (
@@ -248,7 +250,7 @@ CREATE TABLE IF NOT EXISTS `tb_jenis` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_jenis`
+-- Dumping data untuk tabel `tb_jenis`
 --
 
 INSERT INTO `tb_jenis` (`id`, `jenis`, `durasi`, `created_date`, `updated_date`, `created_by`, `updated_by`, `deleted`) VALUES
@@ -261,7 +263,7 @@ INSERT INTO `tb_jenis` (`id`, `jenis`, `durasi`, `created_date`, `updated_date`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_kontak`
+-- Struktur dari tabel `tb_kontak`
 --
 
 CREATE TABLE IF NOT EXISTS `tb_kontak` (
@@ -277,7 +279,7 @@ CREATE TABLE IF NOT EXISTS `tb_kontak` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_kuota`
+-- Struktur dari tabel `tb_kuota`
 --
 
 CREATE TABLE IF NOT EXISTS `tb_kuota` (
@@ -288,7 +290,7 @@ CREATE TABLE IF NOT EXISTS `tb_kuota` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_kuota`
+-- Dumping data untuk tabel `tb_kuota`
 --
 
 INSERT INTO `tb_kuota` (`tahun`, `kuota`, `budget`) VALUES
@@ -301,7 +303,7 @@ INSERT INTO `tb_kuota` (`tahun`, `kuota`, `budget`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_kuota_bidang`
+-- Struktur dari tabel `tb_kuota_bidang`
 --
 
 CREATE TABLE IF NOT EXISTS `tb_kuota_bidang` (
@@ -316,7 +318,7 @@ CREATE TABLE IF NOT EXISTS `tb_kuota_bidang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_kuota_bidang`
+-- Dumping data untuk tabel `tb_kuota_bidang`
 --
 
 INSERT INTO `tb_kuota_bidang` (`id`, `id_bidang`, `bulan`, `kuota`, `sisa`) VALUES
@@ -354,7 +356,7 @@ INSERT INTO `tb_kuota_bidang` (`id`, `id_bidang`, `bulan`, `kuota`, `sisa`) VALU
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_kuota_bulan`
+-- Struktur dari tabel `tb_kuota_bulan`
 --
 
 CREATE TABLE IF NOT EXISTS `tb_kuota_bulan` (
@@ -366,7 +368,7 @@ CREATE TABLE IF NOT EXISTS `tb_kuota_bulan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_kuota_bulan`
+-- Dumping data untuk tabel `tb_kuota_bulan`
 --
 
 INSERT INTO `tb_kuota_bulan` (`no`, `bulan`, `tahun`, `kuota`) VALUES
@@ -434,7 +436,7 @@ INSERT INTO `tb_kuota_bulan` (`no`, `bulan`, `tahun`, `kuota`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_level`
+-- Struktur dari tabel `tb_level`
 --
 
 CREATE TABLE IF NOT EXISTS `tb_level` (
@@ -451,7 +453,7 @@ CREATE TABLE IF NOT EXISTS `tb_level` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
--- Dumping data for table `tb_level`
+-- Dumping data untuk tabel `tb_level`
 --
 
 INSERT INTO `tb_level` (`level`, `nama`, `deskripsi`, `kategori`, `created_date`, `updated_date`, `updated_by`, `created_by`, `deleted`) VALUES
@@ -465,7 +467,7 @@ INSERT INTO `tb_level` (`level`, `nama`, `deskripsi`, `kategori`, `created_date`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_magang`
+-- Struktur dari tabel `tb_magang`
 --
 
 CREATE TABLE IF NOT EXISTS `tb_magang` (
@@ -485,7 +487,7 @@ CREATE TABLE IF NOT EXISTS `tb_magang` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
--- Dumping data for table `tb_magang`
+-- Dumping data untuk tabel `tb_magang`
 --
 
 INSERT INTO `tb_magang` (`no`, `id_member`, `pembina`, `no_sertifikat`, `status`, `created_date`, `updated_date`, `created_by`, `updated_by`, `deleted`) VALUES
@@ -496,7 +498,7 @@ INSERT INTO `tb_magang` (`no`, `id_member`, `pembina`, `no_sertifikat`, `status`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_member`
+-- Struktur dari tabel `tb_member`
 --
 
 CREATE TABLE IF NOT EXISTS `tb_member` (
@@ -529,18 +531,20 @@ CREATE TABLE IF NOT EXISTS `tb_member` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Menyimpan data user yg sudah register';
 
 --
--- Dumping data for table `tb_member`
+-- Dumping data untuk tabel `tb_member`
 --
 
 INSERT INTO `tb_member` (`id`, `nama`, `instansi`, `alamat`, `jurusan`, `id_jenis`, `id_bidang`, `tujuan`, `bulan_pengajuan`, `password`, `email`, `hp`, `level`, `created_date`, `updated_date`, `created_by`, `updated_by`, `deleted`) VALUES
 ('u20160423022930', 'Marceli Aditya', 'Universitas Jember', 'Jalan Manyar', 'Sistem Informasi', 5, 1, 'pkl', '2016-06-01', 'e3b15', 'celi@gmail.com', '0899311823', 4, '0000-00-00 00:00:00', NULL, '', NULL, 0),
 ('u20160423024443', 'Affan Taruna', 'Universitas Brawijaya', 'Mayang', 'Teknik Mesin', 5, 4, 'pkl', '2016-06-01', 'f8c4b', 'afan@gmail.com', '086543578909', 4, '0000-00-00 00:00:00', NULL, '', NULL, 0),
-('u20160423025040', 'Nindi Norya', 'Universitas Malang', 'Tulungagung', 'Akuntansi', 5, 3, 'pkl', '2016-05-01', '6822c', 'nindi@gmail.com', '086543578909', 4, '0000-00-00 00:00:00', NULL, '', NULL, 0);
+('u20160423025040', 'Nindi Norya', 'Universitas Malang', 'Tulungagung', 'Akuntansi', 5, 3, 'pkl', '2016-05-01', '6822c', 'nindi@gmail.com', '086543578909', 4, '0000-00-00 00:00:00', NULL, '', NULL, 0),
+('u20160524063625', 'haris', 'UNEJ', 'KAKAJSKSJK', 'PSSI', 1, 1, 'pkl', '2016-05-31', 'b407a', 'haris@gmail.com', '089989898989', 4, '0000-00-00 00:00:00', '2016-05-24 08:09:05', '', NULL, 0),
+('u20160524070952', 'arfan', 'Universitas Jember', 'ASSASASA', 'PSSI', 5, 1, 'pkl', '1994-05-25', '89af8', 'arfan@gmail.com', '98798798797', 4, '0000-00-00 00:00:00', NULL, '', NULL, 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_member_user`
+-- Struktur dari tabel `tb_member_user`
 --
 
 CREATE TABLE IF NOT EXISTS `tb_member_user` (
@@ -565,20 +569,23 @@ CREATE TABLE IF NOT EXISTS `tb_member_user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_member_user`
+-- Dumping data untuk tabel `tb_member_user`
 --
 
 INSERT INTO `tb_member_user` (`id`, `id_user`, `nama`, `no_induk`, `alamat`, `jk`, `hp`, `tgl_lahir`, `foto`, `status`, `alasan_penolakan`, `created_date`, `updated_date`, `created_by`, `updated_by`, `deleted`) VALUES
 (1, 'u20160423022930', 'Marceli Aditya', '122410101001', 'Jalan Manyar', 1, '08993111823', '1990-04-24 00:00:00', 'u20160423022930_foto_122410101001.jpg', 3, '', '2016-04-23 02:31:19', '2016-04-23 02:36:14', '', '122410101033', 0),
 (2, 'u20160423022930', 'Mahmuda', '122410101026', 'Gebang', 0, '085257783017', '1993-04-30 00:00:00', 'u20160423022930_foto_122410101026.jpg', 3, '', '2016-04-23 02:31:59', '2016-04-23 02:55:39', '', '122410101087', 0),
 (3, 'u20160423024443', 'Affan Taruna', '122410101001', 'Mayang', 1, '0874567883', '1992-04-24 00:00:00', 'u20160423024443_foto_122410101001.jpg', 3, '', '2016-04-23 02:45:51', '2016-04-23 03:01:33', '', '122410101033', 0),
-(4, 'u20160423024443', 'Yudi Candra', '122410101037', 'Kaliwates', 1, '098765432345', '1993-04-25 00:00:00', 'u20160423024443_foto_122410101037.jpg', 2, '', '2016-04-23 02:46:20', '2016-04-23 02:48:52', '', NULL, 0),
-(5, 'u20160423025040', 'Nindi Norya', '122410101036', 'Ta', 0, '0987654345', '1992-12-12 00:00:00', 'u20160423025040_foto_122410101036.jpg', 0, '', '2016-04-23 02:52:13', '2016-04-23 02:52:51', '', NULL, 0);
+(4, 'u20160423024443', 'Yudi Candra', '122410101037', 'Kaliwates', 1, '098765432345', '1993-04-25 00:00:00', 'u20160423024443_foto_122410101037.jpg', 3, '', '2016-04-23 02:46:20', '2016-04-23 02:48:52', '', NULL, 0),
+(5, 'u20160423025040', 'Nindi Norya', '122410101036', 'Ta', 0, '0987654345', '1992-12-12 00:00:00', 'u20160423025040_foto_122410101036.jpg', 0, '', '2016-04-23 02:52:13', '2016-04-23 02:52:51', '', NULL, 0),
+(6, 'u20160524063625', 'HARIS1', '122556565', 'FTFYTVYV', 1, '232323232', '1994-05-24 00:00:00', 'u20160524063625_foto_122556565.jpg', 2, '', '2016-05-24 06:40:02', '2016-05-24 06:44:55', '', NULL, 0),
+(7, 'u20160524063625', 'HARIS2', '17651761516', 'CFGBHJNN', 1, '2131313131', '1994-05-24 00:00:00', 'u20160524063625_foto_17651761516.jpg', 2, '', '2016-05-24 06:40:30', '2016-05-24 06:44:55', '', NULL, 0),
+(8, 'u20160524070952', 'ARFAN', '2715211', 'ASASASAS', 1, '212121212', '1994-05-31 00:00:00', 'u20160524070952_foto_2715211.jpg', -1, '', '2016-05-24 07:12:04', NULL, '', NULL, 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_menu`
+-- Struktur dari tabel `tb_menu`
 --
 
 CREATE TABLE IF NOT EXISTS `tb_menu` (
@@ -597,7 +604,7 @@ CREATE TABLE IF NOT EXISTS `tb_menu` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_menu`
+-- Dumping data untuk tabel `tb_menu`
 --
 
 INSERT INTO `tb_menu` (`id`, `menu`, `link`, `deskripsi`, `icon`, `visible`, `created_date`, `updated_date`, `created_by`, `updated_by`, `deleted`) VALUES
@@ -628,12 +635,13 @@ INSERT INTO `tb_menu` (`id`, `menu`, `link`, `deskripsi`, `icon`, `visible`, `cr
 (25, 'Detail Kelompok', 'dashboard/kelompok_detail', 'Digunakan untuk mengganti password lama ', '&#xf085', 0, '0000-00-00 00:00:00', NULL, '', NULL, 0),
 (26, 'Pendaftar Diterima', 'dashboard/daftar_terima', 'Detail penerimaan pengaju', '&#xf085', 0, '0000-00-00 00:00:00', NULL, '', NULL, 0),
 (27, 'Report', 'dashboard/report', 'Laporan diklat', '&#xf085', 1, '0000-00-00 00:00:00', NULL, '', NULL, 0),
-(28, 'Kuota Bidang', 'dashboard/kuota_bidang', 'Laporan diklat', '&#xf085', 1, '0000-00-00 00:00:00', NULL, '', NULL, 0);
+(28, 'Kuota Bidang', 'dashboard/kuota_bidang', 'Laporan diklat', '&#xf085', 1, '0000-00-00 00:00:00', NULL, '', NULL, 0),
+(29, 'Kelompok', 'dashboard/kelompok', 'daftar kelompok peserta magang', '&#xf085', 1, '0000-00-00 00:00:00', NULL, '', NULL, 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_nilai_nteknis`
+-- Struktur dari tabel `tb_nilai_nteknis`
 --
 
 CREATE TABLE IF NOT EXISTS `tb_nilai_nteknis` (
@@ -656,7 +664,7 @@ CREATE TABLE IF NOT EXISTS `tb_nilai_nteknis` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_nilai_teknis`
+-- Struktur dari tabel `tb_nilai_teknis`
 --
 
 CREATE TABLE IF NOT EXISTS `tb_nilai_teknis` (
@@ -677,7 +685,7 @@ CREATE TABLE IF NOT EXISTS `tb_nilai_teknis` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_notifikasi`
+-- Struktur dari tabel `tb_notifikasi`
 --
 
 CREATE TABLE IF NOT EXISTS `tb_notifikasi` (
@@ -697,7 +705,7 @@ CREATE TABLE IF NOT EXISTS `tb_notifikasi` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_pegawai`
+-- Struktur dari tabel `tb_pegawai`
 --
 
 CREATE TABLE IF NOT EXISTS `tb_pegawai` (
@@ -718,7 +726,7 @@ CREATE TABLE IF NOT EXISTS `tb_pegawai` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_pegawai`
+-- Dumping data untuk tabel `tb_pegawai`
 --
 
 INSERT INTO `tb_pegawai` (`nip`, `nama`, `jabatan`, `id_unitkerja`, `hp`, `alamat`, `is_pembina`, `created_date`, `updated_date`, `created_by`, `updated_by`, `deleted`) VALUES
@@ -734,7 +742,7 @@ INSERT INTO `tb_pegawai` (`nip`, `nama`, `jabatan`, `id_unitkerja`, `hp`, `alama
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_pengajuan_pembina`
+-- Struktur dari tabel `tb_pengajuan_pembina`
 --
 
 CREATE TABLE IF NOT EXISTS `tb_pengajuan_pembina` (
@@ -754,7 +762,7 @@ CREATE TABLE IF NOT EXISTS `tb_pengajuan_pembina` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_pengajuan_pembina`
+-- Dumping data untuk tabel `tb_pengajuan_pembina`
 --
 
 INSERT INTO `tb_pengajuan_pembina` (`id`, `id_member`, `pembina`, `status`, `alasan`, `created_date`, `updated_date`, `created_by`, `updated_by`, `deleted`) VALUES
@@ -763,12 +771,14 @@ INSERT INTO `tb_pengajuan_pembina` (`id`, `id_member`, `pembina`, `status`, `ala
 ('20160423023927', 2, '122410101087', 2, 'none', '2016-04-23 02:39:27', '2016-04-23 02:55:39', '', '', 0),
 ('20160423025914', 3, '122410101033', 2, 'none', '2016-04-23 02:59:14', '2016-04-23 03:01:32', '', '', 0),
 ('20160423025915', 4, '122410101033', -1, 'kamu', '2016-04-23 02:59:15', '2016-04-23 03:01:43', '', '', 0),
-('20160423030322', 4, '122410101087', -1, NULL, '2016-04-23 03:03:22', '0000-00-00 00:00:00', '', '', 0);
+('20160423030322', 4, '122410101087', -1, NULL, '2016-04-23 03:03:22', '0000-00-00 00:00:00', '', '', 0),
+('20160524065550', 6, '122410101086', 1, NULL, '2016-05-24 06:55:50', '0000-00-00 00:00:00', '', '', 0),
+('20160613051451', 4, '122410101086', 1, NULL, '2016-06-13 05:14:51', '0000-00-00 00:00:00', '', '', 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_unitkerja`
+-- Struktur dari tabel `tb_unitkerja`
 --
 
 CREATE TABLE IF NOT EXISTS `tb_unitkerja` (
@@ -784,7 +794,7 @@ CREATE TABLE IF NOT EXISTS `tb_unitkerja` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_unitkerja`
+-- Dumping data untuk tabel `tb_unitkerja`
 --
 
 INSERT INTO `tb_unitkerja` (`id`, `deskripsi`, `lokasi`, `created_date`, `updated_date`, `created_by`, `updated_by`, `deleted`) VALUES
@@ -1070,45 +1080,45 @@ INSERT INTO `tb_unitkerja` (`id`, `deskripsi`, `lokasi`, `created_date`, `update
 ('7404213012', 'PP BANJARMASIN BAG', 'KOSONG', '0000-00-00 00:00:00', NULL, '', NULL, 0);
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `tb_admin`
+-- Ketidakleluasaan untuk tabel `tb_admin`
 --
 ALTER TABLE `tb_admin`
   ADD CONSTRAINT `tb_admin_ibfk_3` FOREIGN KEY (`nip`) REFERENCES `tb_pegawai` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `tb_admin_ibfk_4` FOREIGN KEY (`level`) REFERENCES `tb_level` (`level`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `tb_berkas`
+-- Ketidakleluasaan untuk tabel `tb_berkas`
 --
 ALTER TABLE `tb_berkas`
   ADD CONSTRAINT `tb_berkas_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `tb_member` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `tb_hak_akses`
+-- Ketidakleluasaan untuk tabel `tb_hak_akses`
 --
 ALTER TABLE `tb_hak_akses`
   ADD CONSTRAINT `tb_hak_akses_ibfk_2` FOREIGN KEY (`level`) REFERENCES `tb_level` (`level`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `tb_hak_akses_ibfk_3` FOREIGN KEY (`id_menu`) REFERENCES `tb_menu` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `tb_kuota_bidang`
+-- Ketidakleluasaan untuk tabel `tb_kuota_bidang`
 --
 ALTER TABLE `tb_kuota_bidang`
   ADD CONSTRAINT `tb_kuota_bidang_ibfk_1` FOREIGN KEY (`bulan`) REFERENCES `tb_kuota_bulan` (`no`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `tb_kuota_bidang_ibfk_2` FOREIGN KEY (`id_bidang`) REFERENCES `tb_bidang` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `tb_magang`
+-- Ketidakleluasaan untuk tabel `tb_magang`
 --
 ALTER TABLE `tb_magang`
   ADD CONSTRAINT `tb_magang_ibfk_2` FOREIGN KEY (`pembina`) REFERENCES `tb_admin` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `tb_magang_ibfk_3` FOREIGN KEY (`id_member`) REFERENCES `tb_member_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `tb_member`
+-- Ketidakleluasaan untuk tabel `tb_member`
 --
 ALTER TABLE `tb_member`
   ADD CONSTRAINT `tb_member_ibfk_1` FOREIGN KEY (`id_jenis`) REFERENCES `tb_jenis` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -1116,31 +1126,31 @@ ALTER TABLE `tb_member`
   ADD CONSTRAINT `tb_member_ibfk_3` FOREIGN KEY (`level`) REFERENCES `tb_level` (`level`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `tb_member_user`
+-- Ketidakleluasaan untuk tabel `tb_member_user`
 --
 ALTER TABLE `tb_member_user`
   ADD CONSTRAINT `tb_member_user_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `tb_member` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `tb_nilai_nteknis`
+-- Ketidakleluasaan untuk tabel `tb_nilai_nteknis`
 --
 ALTER TABLE `tb_nilai_nteknis`
   ADD CONSTRAINT `tb_nilai_nteknis_ibfk_1` FOREIGN KEY (`id_member`) REFERENCES `tb_member_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `tb_nilai_teknis`
+-- Ketidakleluasaan untuk tabel `tb_nilai_teknis`
 --
 ALTER TABLE `tb_nilai_teknis`
   ADD CONSTRAINT `tb_nilai_teknis_ibfk_1` FOREIGN KEY (`id_member`) REFERENCES `tb_member_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `tb_pegawai`
+-- Ketidakleluasaan untuk tabel `tb_pegawai`
 --
 ALTER TABLE `tb_pegawai`
   ADD CONSTRAINT `tb_pegawai_ibfk_1` FOREIGN KEY (`id_unitkerja`) REFERENCES `tb_unitkerja` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE;
 
 --
--- Constraints for table `tb_pengajuan_pembina`
+-- Ketidakleluasaan untuk tabel `tb_pengajuan_pembina`
 --
 ALTER TABLE `tb_pengajuan_pembina`
   ADD CONSTRAINT `tb_pengajuan_pembina_ibfk_2` FOREIGN KEY (`pembina`) REFERENCES `tb_admin` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE,
