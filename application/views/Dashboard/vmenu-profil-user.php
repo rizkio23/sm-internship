@@ -9,8 +9,7 @@
 
     <!-- BEGIN BREADCRUMB -->
     <ol class="breadcrumb dash">
-      <li><a href="#">Halaman Utama</a></li>
-      <li><a href="#">Profil</a></li>
+      <li><a href="<?php echo base_url().'dashboard/';?>">Halaman Utama</a></li>
       <li class="active">Profil User</li>
     </ol>
     <!-- END OF BREADCRUMB -->

@@ -50,7 +50,7 @@
                <td></td>
                <td></td>
                <td class="center">
-                 <a href="#"><button class="btn btn-xs btn-warning btn-icon"><i class="fa fa-pencil"></i> Nilai</button></a>
+                 <a href="<?php echo base_url().'dashboard/detail_nilai';?>"><button class="btn btn-xs btn-warning btn-icon"><i class="fa fa-pencil"></i> Nilai</button></a>
                </td>
              </tr>
            </tbody>

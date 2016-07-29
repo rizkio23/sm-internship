@@ -150,6 +150,28 @@ class Role extends MY_Controller
 		}
 	}
 
+	public function level_edit()
+	{
+		$data  = $this->input->post();
+		$level = $data['level'];
+
+		unset($data['level']);
+		unset($data['tb']);
+
+		$this->load->model("Mlevel");
+
+		if ($this->Mlevel->update_level($level, $data)) 
+		{
+			$this->pesan('pesan', 'Berhasil disimpan');
+			redirect(base_url().'dashboard/level');
+		}
+		else
+		{
+			$this->pesan('pesan', 'Terdapat kesalahan');
+			redirect(base_url().'dashboard/level');
+		}
+	}
+
 
 	#--------------------------------------------------------------------------
 	# METHODE MENU_ADD

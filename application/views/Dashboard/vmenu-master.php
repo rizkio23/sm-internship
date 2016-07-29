@@ -1,14 +1,14 @@
 <div class="page-wrapper">
   <div class="page-title dash">
     <h3>Master Menu</h3>
-  </div> 
+  </div>
   <ol class="breadcrumb dash">
-    <li><a href="<?php echo base_url().'dashboard';?>">Halaman Utama</a></li>
+    <li><a href="<?php echo base_url().'dashboard/';?>">Halaman Utama</a></li>
     <li class="active">Master Menu</li>
   </ol>
 
   <div class="row">
-        <!-- BEGIN PORTLET -->          
+        <!-- BEGIN PORTLET -->
         <div class="col-md-12">
           <div class="portlet box blue">
             <div class="portlet-title">
@@ -16,7 +16,7 @@
                 <i class="fa fa-book"></i>Master Menu
               </div>
             </div>
-            <div class="portlet-body">          
+            <div class="portlet-body">
               <div class="table-toolbar">
                 <div class="row">
                   <div class="col-md-12">
@@ -25,7 +25,7 @@
                     </div>
                   </div>
                 </div>
-              </div>  
+              </div>
 
               <!-- BEGIN TABLE  -->
               <table class="table table-striped table-bordered table-hover" id="mMenu">
@@ -33,7 +33,7 @@
                  <tr>
                    <th style="text-align:center">No</th>
                    <th>Menu</th>
-                   <th>Deskripsi</th>                 
+                   <th>Deskripsi</th>
                    <th>Link</th>
                    <th style="text-align:center">Tampil Di Sidebar</th>
                    <th style="text-align:center" width="150">Aksi</th>
@@ -54,7 +54,7 @@
                 </td>
               </tr>
             <?php endforeach;?>
-          </table> 
+          </table>
           <!-- END OF TABLE -->
 
           <!-- BEGIN MODAL == POPUP -->
@@ -67,7 +67,7 @@
                 </div>
 
                 <!-- BEGIN FORM  -->
-                <form role="form" method="POST" action="<?=base_url()?>p/role/menu_add?ref=<?=password_hash('tambahMenu', PASSWORD_BCRYPT)?>">        
+                <form role="form" method="POST" action="<?=base_url()?>p/role/menu_add?ref=<?=password_hash('tambahMenu', PASSWORD_BCRYPT)?>">
 
                   <!-- BEGIN MODAL BODY -->
                   <div class="modal-body">
@@ -87,22 +87,22 @@
                         <div class="form-group">
                           <label>Link</label>
                           <input type="text" class="form-control" name="link" placeholder="Link" required>
-                        </div>  
+                        </div>
 
                         <div class="form-group">
                           <label>Deskripsi</label>
                           <textarea type="text" class="form-control" name="deskripsi" placeholder="Deskripsi" rows="2" required></textarea>
-                        </div>   
+                        </div>
 
                         <div class="form-group">
                           <label>Tampilkan di Sidebar</label><br>
                           <input style="padding: 6px 25px;" type="radio" name='visible' value="1" checked=""> Ya
                           <input type="radio" name='visible' value="0"> Tidak
-                        </div> 
+                        </div>
 
                       </div>
                     </div>
-                  </div>  
+                  </div>
                   <!-- END OF MODAL BODY -->
 
                   <!-- BEGIN MODAL FOOTER -->
@@ -111,12 +111,12 @@
                     <input type="submit" class="btn btn-success" name="tb" class="btn btn-primary" value="add">
                   </div>
                   <!-- END OF MODAL FOOTER -->
-                </form> 
+                </form>
                 <!-- ENF OF FORM -->
               </div>
             </div>
           </div>
-          <!-- END MODAL -->            
+          <!-- END MODAL -->
         </div>
       </div>
     </div>
@@ -125,5 +125,5 @@
   <!-- END OF ROW -->
 </div>
 <!-- END OF CONTENT -->
-</div>  
+</div>
 <!-- END OF PAGE -->

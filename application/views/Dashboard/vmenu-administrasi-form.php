@@ -1,17 +1,17 @@
   <div class="page-wrapper">
     <div class="page-title dash">
       <h3>Administrasi User</h3>
-    </div> 
+    </div>
     <ol class="breadcrumb dash">
-      <li><a href="#">Home</a></li>
-      <li><a href="<?php echo base_url().'admin/dashboard/administrasi';?>">Administrasi User</a></li>
+      <li><a href="<?php echo base_url().'dashboard/';?>">Home</a></li>
+      <li><a href="<?php echo base_url().'dashboard/admin';?>">Administrasi User</a></li>
       <li class="active">Tambah Data</li>
     </ol>
 
     <div class="row">
       <!-- Begin Portlet -->
       <div class="col-md-12">
-        <div class="portlet box red">                          
+        <div class="portlet box red">
           <div class="portlet-title">
             <div class="caption">
               <i class="fa fa-plus"></i>Tambah Data
@@ -23,7 +23,7 @@
                 <div class="form-group">
                   <label class="col-md-2 control-label">NIK</label>
                   <div class="col-md-4">
-                    <input type="text" class="form-control" name="nip" maxlength="12" placeholder="NIK" value="<?php echo (isset($detail))? $detail->nip:''; ?>" <?php echo (isset($detail)?'readonly':'')?>> 
+                    <input type="text" class="form-control" name="nip" maxlength="12" placeholder="NIK" value="<?php echo (isset($detail))? $detail->nip:''; ?>" <?php echo (isset($detail)?'readonly':'')?>>
                   </div>
                   <span class="col-md-2" style="padding-top:7px"><i id="status" class="fa"></i></span>
                   <!-- fa fa-check-circle =centang ; fa fa-times-circle=x -->
@@ -40,10 +40,10 @@
                   <div class="col-md-5">
                     <select class="form-control" name="unit">
                       <?php
-                      foreach ($unit as $key) {                                                            
-                        if (isset($detail))                                                             
-                        {     
-                          if ($key->id == $detail->id_unitkerja)                                                                   
+                      foreach ($unit as $key) {
+                        if (isset($detail))
+                        {
+                          if ($key->id == $detail->id_unitkerja)
                           {
                             echo "<option value='".$key->id."' selected>".$key->deskripsi."</option>";
                             continue;
@@ -57,18 +57,18 @@
                 </div>
                 <div class="form-group">
                   <label class="col-md-2 control-label">Level</label>
-                  <div class="col-md-3">                                          
+                  <div class="col-md-3">
                     <select class="form-control" name="level">
                       <?php
                       foreach ($level as $key) {
-                        if (isset($detail)) 
+                        if (isset($detail))
                         {
-                          if ($key->level == $detail->level) 
+                          if ($key->level == $detail->level)
                           {
                             echo "<option value='".$key->level."' selected>".$key->nama."</option>";
                             continue;
                           }
-                        }                                                            
+                        }
                         echo "<option value='".$key->level."'>".$key->nama."</option>";
                       }
                       ?>
@@ -80,7 +80,7 @@
                   <div class="col-md-4">
                     <input type="text" class="form-control dash" name="jabatan" placeholder='Jabatan' value="<?php echo (isset($detail))? $detail->jabatan:''; ?>">
                   </div>
-                </div> 
+                </div>
                 <div class="form-group">
                   <label class="col-md-2 control-label">Nomor HP</label>
                   <div class="col-md-4">
@@ -92,7 +92,7 @@
                   <div class="col-md-4">
                     <textarea class="form-control dash" name="alamat" placeholder='Alamat'><?php echo (isset($detail))? $detail->alamat:''; ?></textarea>
                   </div>
-                </div> 
+                </div>
                 <div class="form-group">
                   <label class="col-md-2 control-label">Seorang Pembimbing</label>
                   <div class="col-md-4">
@@ -103,7 +103,7 @@
                       <input type="radio" name="pembina" value="0"> Tidak </label>
                     </div>
                   </div>
-                </div>                 
+                </div>
                 <div class="form-group">
                   <label class="col-md-2 control-label">Captcha</label>
                   <div class="col-md-4">

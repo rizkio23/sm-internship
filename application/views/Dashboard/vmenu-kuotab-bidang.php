@@ -9,7 +9,7 @@
 
   <!-- BEGIN BREADCRUMB -->
   <ol class="breadcrumb dash">
-    <li><a href="<?php echo base_url().'dashboard';?>">Home</a></li>
+    <li><a href="<?php echo base_url().'dashboard/';?>">Home</a></li>
     <li class="active">Kuota</li>
   </ol>
   <!-- END OF BREADCRUMB -->
@@ -169,7 +169,7 @@
 <script type="text/javascript">
   $(document).ready(function(){
       var total_kuota  = <?=$total?>;
-      var total_bidang = <?=($no-1)?> 
+      var total_bidang = <?=($no-1)?>
       var sisa_kuota   = total_kuota;
 
       for (var i = 1; i <= total_bidang; i++) {

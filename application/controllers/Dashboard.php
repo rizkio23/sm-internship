@@ -284,7 +284,7 @@ class Dashboard extends MY_Controller
 		#--------------------------------------------------------------------------
 		# Hasil pengambilan data di tampilkan ke Halaman LEVEL
 		#--------------------------------------------------------------------------
-		$this->init('vlevel-add', $con);
+		$this->init('vmenu-level', $con);
 	}
 
 	#--------------------------------------------------------------------------
@@ -677,6 +677,7 @@ class Dashboard extends MY_Controller
 		$data['data'] 	= $this->Mmember->get_persetujuan_unit($this->session->userdata('user')['nip']);
 		$this->init('vmenu-persetujuan-uk', $data);
 	}
+
 	public function nilai_teknis()
 	{
 		$this->load->model('Mnilai');
@@ -910,6 +911,27 @@ class Dashboard extends MY_Controller
 		// print_r($data['member']);
 
 		$this->init('vmenu-kelompok', $data);
+	}
+
+	public function daftar_pembina()
+	{
+		$tanggal = date('Y-m-d');
+		$bulan 	 = null;
+		$tahun 	 = null;
+
+		if(! empty($_GET))
+		{
+			$bulan 	 = $_GET['bulan'];
+			$tahun 	 = $_GET['tahun'];
+			$tanggal = $tahun.'-'.$bulan.'-1';
+		}
+
+		$this->load->model('Mmagang');
+
+		$data['filter'] = array('bulan'=>$bulan) ;
+		$data['data'] 	= $this->Mmagang->get_data_pembina($tanggal);
+
+		$this->init('vmenu-pembimbing', $data);
 	}
 }
 

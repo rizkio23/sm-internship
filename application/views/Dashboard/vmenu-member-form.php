@@ -4,8 +4,7 @@
     <h3>Administrasi User</h3>
   </div>
   <ol class="breadcrumb dash">
-    <li><a href="#">Halaman Utama</a></li>
-    <li><a href="<?php echo base_url().'admin/dashboard/administrasi';?>">Administrasi User</a></li>
+    <li><a href="<?php echo base_url().'dashboard/';?>">Halaman Utama</a></li>
     <li class="active">Form Member</li>
   </ol>
 

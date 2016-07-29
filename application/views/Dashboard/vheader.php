@@ -49,47 +49,47 @@
           <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
             <img alt="" width="34px" class="img-circle" src="<?php echo base_url().'assets/img/profpic/default_blank.png';?>"/>
             <span>
-             Hi!, <?=$nama?></span>
-             <i class="fa fa-angle-down"></i>
-           </a>
-           <ul class="dropdown-menu" style="width:205px">
-            <li style="padding:10px">
-            <a href ="<?php echo base_url().'dashboard/reset_password';?>">
-                <i class="fa fa-lg fa-unlock-alt "></i> Ganti Kata Sandi </a>
-              </li>
-            <li style="padding:10px">
-              <a href ="<?php echo base_url().'auth/out';?>">
-                <i class="fa fa-lg fa-key"></i> Keluar </a>
-              </li>
-            </ul>
-          </li>
-          <!-- END USER LOGIN DROPDOWN -->
-        </ul>
-
-        <?php
-          if (isset($notifikasi)):
-        ?>
-        <ul class="nav navbar-nav pull-right" style="margin-right:20px">
-          <!-- BEGIN NOTIFICATION -->
-          <li class="dropdown">
-            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-              <i class="fa fa-lg fa-bell"></i>
-              <span class="badge badge-danger"><?php echo count($notifikasi) ?></span>
+              Hi!, <?=$nama?></span>
+              <i class="fa fa-angle-down"></i>
             </a>
-            <ul class="dropdown-menu">
-              <?php foreach($notifikasi as $key): ?>
-              <li>
-                <a href="">
-                  <span class="time"><?=date('d M Y', strtotime($key['no']))?></span>
-                  <textarea style="font-size: 12px;line-height: 1.3;display: block !important;resize:none;border-bottom:none" disabled><?=$key['pesan']?></textarea>
-                </a>
+            <ul class="dropdown-menu" style="width:205px">
+              <li style="padding:10px">
+                <a href ="<?php echo base_url().'dashboard/reset_password';?>">
+                  <i class="fa fa-lg fa-unlock-alt "></i> Ganti Kata Sandi </a>
+                </li>
+                <li style="padding:10px">
+                  <a href ="<?php echo base_url().'auth/out';?>">
+                    <i class="fa fa-lg fa-key"></i> Keluar </a>
+                  </li>
+                </ul>
               </li>
-              <?php endforeach; ?>
-              </ul>
-            </li>
-            <!-- END OF NOTIFICATION -->
-          </ul>
-          <?php endif; ?>
+              <!-- END USER LOGIN DROPDOWN -->
+            </ul>
 
-        </div>
-      </nav>
+            <?php
+            if (isset($notifikasi)):
+              ?>
+              <ul class="nav navbar-nav pull-right" style="margin-right:20px">
+                <!-- BEGIN NOTIFICATION -->
+                <li class="dropdown">
+                  <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                    <i class="fa fa-lg fa-bell"></i>
+                    <span class="badge badge-danger"><?php echo count($notifikasi) ?></span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <?php foreach($notifikasi as $key): ?>
+                      <li>
+                        <a href="">
+                          <span class="time"><?=date('d M Y', strtotime($key['no']))?></span>
+                          <textarea style="font-size: 12px;line-height: 1.3;display: block !important;resize:none;border-bottom:none" disabled><?=$key['pesan']?></textarea>
+                        </a>
+                      </li>
+                    <?php endforeach; ?>
+                  </ul>
+                </li>
+                <!-- END OF NOTIFICATION -->
+              </ul>
+            <?php endif; ?>
+
+          </div>
+        </nav>

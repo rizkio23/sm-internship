@@ -23,9 +23,10 @@ class Makses extends MY_Model {
         # Proses pengambilan data melalui query pada 'tb_akses'
         #--------------------------------------------------------------------------
         $con['tabel']   = 'tb_hak_akses';
-        $con['select']  = 'tb_hak_akses.no, id_menu, menu, level, priv';
+        $con['select']  = 'tb_hak_akses.no, id_menu, menu, deskripsi, level, priv';
         $con['join']    = array('tb_menu'=>'tb_hak_akses.id_menu = tb_menu.id');
         $con['where']   = array('level'=>$level);
+        $con['order_by']= "menu ASC";
 
         #--------------------------------------------------------------------------
         # Hasil pengambilan data di kembalikan dalam bentuk array

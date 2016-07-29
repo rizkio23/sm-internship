@@ -20,11 +20,11 @@ var TableManaged = function () {
                 "zeroRecords": "No matching records found"
             },
 
-            "bStateSave": true,
+            "bStateSave": false,
 
             "columns": [{
 
-                "orderable": true
+                "orderable": false
             }, {
                 "orderable": false
             }, {
@@ -35,11 +35,11 @@ var TableManaged = function () {
                 "orderable": false
             }],
             "lengthMenu": [
-                [5, 15, 20, -1],
-                [5, 15, 20, "All"] // change per page values here
+                [10, 15, 20, -1],
+                [10, 15, 20, "All"] // change per page values here
             ],
             // set the initial value
-            "pageLength": 5,
+            "pageLength": 10,
             "pagingType": "bootstrap_full_number",
             "language": {
                 "search": "Cari Menu: ",
@@ -55,7 +55,7 @@ var TableManaged = function () {
                 'orderable': false,
                 'targets': [0]
             }, {
-                "searchable": false,
+                "searchable": true,
                 "targets": [1]
             }],
             "order": [
@@ -108,7 +108,7 @@ var TableManaged = function () {
                 "zeroRecords": "No matching records found"
             },
 
-            "bStateSave": true,
+            "bStateSave": false,
 
             "columns": [{
                 "orderable": false
@@ -248,7 +248,7 @@ var TableManaged = function () {
                 "zeroRecords": "No matching records found"
             },
 
-            "bStateSave": true,
+            "bStateSave": false,
 
             "columns": [{
                 "orderable": false
@@ -313,7 +313,7 @@ var TableManaged = function () {
                 "zeroRecords": "No matching records found"
             },
 
-            "bStateSave": true,
+            "bStateSave": false,
 
             "columns": [{
                 "orderable": false
@@ -329,11 +329,11 @@ var TableManaged = function () {
                 "orderable": false
             }],
             "lengthMenu": [
-                [5, 15, 20, -1],
-                [5, 15, 20, "All"] // change per page values here
+                [10, 15, 20, -1],
+                [10, 15, 20, "All"] // change per page values here
             ],
             // set the initial value
-            "pageLength": 5,
+            "pageLength": 10,
             "pagingType": "bootstrap_full_number",
             "language": {
                 "search": "Cari: ",
@@ -378,7 +378,7 @@ var TableManaged = function () {
                 "zeroRecords": "No matching records found"
             },
 
-            "bStateSave": true,
+            "bStateSave": false,
 
             "columns": [{
                 "orderable": false
@@ -443,7 +443,7 @@ var TableManaged = function () {
                 "zeroRecords": "No matching records found"
             },
 
-            "bStateSave": true,
+            "bStateSave": false,
 
             "columns": [{
                 "orderable": false
@@ -512,7 +512,7 @@ var TableManaged = function () {
                 "zeroRecords": "No matching records found"
             },
 
-            "bStateSave": true,
+            "bStateSave": false,
 
             "columns": [{
                 "orderable": false
@@ -580,7 +580,7 @@ var TableManaged = function () {
                 "zeroRecords": "No matching records found"
             },
 
-            "bStateSave": true,
+            "bStateSave": false,
 
             "columns": [{
                 "orderable": false
@@ -641,7 +641,7 @@ var TableManaged = function () {
                 "zeroRecords": "No matching records found"
             },
 
-            "bStateSave": true,
+            "bStateSave": false,
 
             "columns": [{
                 "orderable": false

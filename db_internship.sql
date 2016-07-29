@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 16 Jun 2016 pada 05.58
+-- Generation Time: 29 Jul 2016 pada 04.10
 -- Versi Server: 5.6.16
 -- PHP Version: 5.5.9
 
@@ -46,11 +46,13 @@ CREATE TABLE IF NOT EXISTS `tb_admin` (
 --
 
 INSERT INTO `tb_admin` (`nip`, `password`, `level`, `status`, `logtime`, `created_date`, `updated_date`, `created_by`, `updated_by`, `deleted`) VALUES
+('122410101011', '$2y$10$TDgqTxpgHiWeZlvL.E7sYOuRpA6/jZBlKeo8URnWbHgpp0QbVMpVC', 7, 1, NULL, '0000-00-00 00:00:00', NULL, '', NULL, 0),
+('122410101022', '$2y$10$TDgqTxpgHiWeZlvL.E7sYOuRpA6/jZBlKeo8URnWbHgpp0QbVMpVC', 8, 1, NULL, '0000-00-00 00:00:00', NULL, '', NULL, 0),
 ('122410101033', '$2y$10$tx0C69iPAf9ShxWZ/ihgiekGAe6ZPae8ilrprKbaEF7ccBKQbbw36', 3, 1, '2016-04-23 03:01:25', '2016-04-20 00:00:00', NULL, '122410101086', NULL, 0),
-('122410101085', '$2y$10$QRqGrYmnM2Ctrt/kLvBmuegGGAg1sREX0f8B7mh1E/t9P2Z0BVShK', 2, 2, '2016-06-13 05:26:42', '2015-09-28 03:55:35', '2015-09-28 03:55:35', '122410101086', '122410101086', 0),
-('122410101086', '$2y$10$QRqGrYmnM2Ctrt/kLvBmuegGGAg1sREX0f8B7mh1E/t9P2Z0BVShK', 1, 1, '2016-06-13 05:15:53', '2015-09-23 08:39:12', '2015-09-23 08:39:12', '122410101086', '122410101086', 0),
+('122410101085', '$2y$10$QRqGrYmnM2Ctrt/kLvBmuegGGAg1sREX0f8B7mh1E/t9P2Z0BVShK', 2, 2, '2016-06-29 10:45:05', '2015-09-28 03:55:35', '2015-09-28 03:55:35', '122410101086', '122410101086', 0),
+('122410101086', '$2y$10$QRqGrYmnM2Ctrt/kLvBmuegGGAg1sREX0f8B7mh1E/t9P2Z0BVShK', 1, 1, '2016-06-29 10:45:28', '2015-09-23 08:39:12', '2015-09-23 08:39:12', '122410101086', '122410101086', 0),
 ('122410101087', '$2y$10$TDgqTxpgHiWeZlvL.E7sYOuRpA6/jZBlKeo8URnWbHgpp0QbVMpVC', 3, 1, '2016-05-24 06:49:20', '2015-09-28 05:21:36', NULL, '122410101086', NULL, 0),
-('122410101099', '$2y$10$TDgqTxpgHiWeZlvL.E7sYOuRpA6/jZBlKeo8URnWbHgpp0QbVMpVC', 5, 1, '2016-06-13 05:16:18', '2015-09-28 06:53:07', NULL, '122410101086', NULL, 0);
+('122410101099', '$2y$10$TDgqTxpgHiWeZlvL.E7sYOuRpA6/jZBlKeo8URnWbHgpp0QbVMpVC', 5, 1, '2016-06-24 08:28:19', '2015-09-28 06:53:07', NULL, '122410101086', NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -110,8 +112,8 @@ CREATE TABLE IF NOT EXISTS `tb_bidang` (
 --
 
 INSERT INTO `tb_bidang` (`id`, `bagian`, `deskripsi`, `status`, `created_date`, `updated_date`, `created_by`, `updated_by`, `deleted`) VALUES
-(1, 'Teknologi Informasi', ' Bidang TI yang terbaik', 1, '2015-09-19 12:38:09', '2015-12-20 04:01:37', '122410101086', NULL, 0),
-(2, 'Administrasi', ' Bidang bagian administrasi kantor', 1, '2015-09-19 12:38:28', '2015-12-20 04:01:32', '122410101086', NULL, 0),
+(1, 'Teknologi Informasi', ' Bidang TI yang terbaik', 1, '2015-09-19 12:38:09', '2016-06-29 09:04:59', '122410101086', NULL, 0),
+(2, 'Administrasi', ' Bidang bagian administrasi kantor', 1, '2015-09-19 12:38:28', '2016-06-29 09:05:01', '122410101086', NULL, 0),
 (3, 'Akuntansi dan Keuangan', ' Bidang tentang manajemen keuangan dan perhitungan akuntansi', 1, '2015-09-21 05:04:07', '2015-12-20 04:01:34', '122410101086', NULL, 0),
 (4, 'Teknik Mesin', ' Bidang tentang komponen komponen mesin ', 1, '2015-09-21 05:06:17', '2015-12-20 04:01:39', '122410101086', NULL, 0),
 (5, 'Perpajakan', ' Bidang tentang pajak yang ada dalam perusahaan', 1, '2015-09-21 05:07:32', '2015-09-29 03:53:26', '122410101086', NULL, 0),
@@ -168,7 +170,7 @@ CREATE TABLE IF NOT EXISTS `tb_hak_akses` (
   KEY `id_menu` (`id_menu`),
   KEY `level_2` (`level`),
   KEY `level_3` (`level`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=42 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=72 ;
 
 --
 -- Dumping data untuk tabel `tb_hak_akses`
@@ -215,7 +217,37 @@ INSERT INTO `tb_hak_akses` (`no`, `id_menu`, `level`, `priv`, `created_date`, `u
 (38, 26, 4, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0),
 (39, 27, 2, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0),
 (40, 28, 5, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0),
-(41, 29, 5, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0);
+(41, 29, 5, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0),
+(42, 30, 5, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0),
+(43, 10, 7, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0),
+(44, 15, 7, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0),
+(45, 28, 7, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0),
+(46, 11, 7, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0),
+(47, 12, 7, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0),
+(48, 13, 7, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0),
+(49, 26, 7, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0),
+(50, 9, 7, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0),
+(51, 14, 7, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0),
+(52, 16, 7, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0),
+(53, 17, 7, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0),
+(54, 18, 7, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0),
+(55, 10, 8, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0),
+(56, 15, 8, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0),
+(57, 28, 8, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0),
+(58, 11, 8, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0),
+(59, 12, 8, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0),
+(60, 13, 8, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0),
+(61, 26, 8, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0),
+(62, 9, 8, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0),
+(63, 14, 8, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0),
+(64, 16, 8, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0),
+(65, 17, 8, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0),
+(66, 18, 8, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0),
+(67, 27, 8, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0),
+(68, 23, 8, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0),
+(69, 24, 8, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0),
+(70, 25, 8, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0),
+(71, 22, 8, '1111', '0000-00-00 00:00:00', NULL, '', NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -450,7 +482,7 @@ CREATE TABLE IF NOT EXISTS `tb_level` (
   `created_by` varchar(12) NOT NULL,
   `deleted` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`level`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 --
 -- Dumping data untuk tabel `tb_level`
@@ -461,8 +493,10 @@ INSERT INTO `tb_level` (`level`, `nama`, `deskripsi`, `kategori`, `created_date`
 (2, 'Diklat', 'Hak akses untuk kantor Diklat', 'diklat', '2015-09-23 00:00:00', NULL, NULL, '122410101086', 0),
 (3, 'Unit Kerja', 'Hak akses untuk Unit Kerja di PT. Semen Indonesia Tbk.', 'unit_kerja', '2015-09-23 00:00:00', NULL, NULL, '122410101086', 0),
 (4, 'User', 'Hak akses untuk Peserta PKL', 'user', '0000-00-00 00:00:00', NULL, NULL, '', 0),
-(5, 'Diklat [Bu Mafula]', 'Hak akses Diklat khusus Menu Persetujuan magang', 'diklat', '2015-09-28 06:23:57', NULL, NULL, '122410101086', 0),
-(6, 'test', 'anak buah', 'diklat', '2015-12-21 09:22:32', '2015-12-21 09:23:39', '122410101086', '122410101086', 1);
+(5, 'Diklat (Bu Mahfula', 'Hak akses Diklat khusus Menu Persetujuan magang', 'diklat', '2015-09-28 06:23:57', NULL, NULL, '122410101086', 0),
+(6, 'test', 'anak buah', 'diklat', '2015-12-21 09:22:32', '2015-12-21 09:23:39', '122410101086', '122410101086', 1),
+(7, 'DIklat_UK', 'Gabungan hak akses Diklat dan Unit Kerja', 'diklat', '2016-06-29 08:56:29', NULL, NULL, '122410101086', 0),
+(8, 'Diklat-UK-B.mafula', 'Gabungan hak akses Diklat, Unit Kerja dan diklat [bu mafulla]', 'diklat', '2016-06-29 08:57:54', NULL, NULL, '122410101086', 0);
 
 -- --------------------------------------------------------
 
@@ -636,7 +670,8 @@ INSERT INTO `tb_menu` (`id`, `menu`, `link`, `deskripsi`, `icon`, `visible`, `cr
 (26, 'Pendaftar Diterima', 'dashboard/daftar_terima', 'Detail penerimaan pengaju', '&#xf085', 0, '0000-00-00 00:00:00', NULL, '', NULL, 0),
 (27, 'Report', 'dashboard/report', 'Laporan diklat', '&#xf085', 1, '0000-00-00 00:00:00', NULL, '', NULL, 0),
 (28, 'Kuota Bidang', 'dashboard/kuota_bidang', 'Laporan diklat', '&#xf085', 1, '0000-00-00 00:00:00', NULL, '', NULL, 0),
-(29, 'Kelompok', 'dashboard/kelompok', 'daftar kelompok peserta magang', '&#xf085', 1, '0000-00-00 00:00:00', NULL, '', NULL, 0);
+(29, 'Kelompok', 'dashboard/kelompok', 'daftar kelompok peserta magang', '&#xf085', 1, '0000-00-00 00:00:00', NULL, '', NULL, 0),
+(30, 'Daftar Pembimbing', 'dashboard/daftar_pembina', 'daftar pembimbing lapangan PKL', '&#xf085', 1, '0000-00-00 00:00:00', NULL, '', NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -730,6 +765,8 @@ CREATE TABLE IF NOT EXISTS `tb_pegawai` (
 --
 
 INSERT INTO `tb_pegawai` (`nip`, `nama`, `jabatan`, `id_unitkerja`, `hp`, `alamat`, `is_pembina`, `created_date`, `updated_date`, `created_by`, `updated_by`, `deleted`) VALUES
+('122410101011', 'Diklat-UK', 'kepala', '2002026100', '098989989765', 'kl.', 1, '0000-00-00 00:00:00', NULL, '', NULL, 0),
+('122410101022', 'Diklat-UK-BMAFULA', 'kepala', '2002026100', '089123765134', 'la;.', 1, '0000-00-00 00:00:00', NULL, '', NULL, 0),
 ('122410101026', 'Mahmuda', 'BIro Diklat', '2002025300', '08993111823', 'Jalan Manggar XA gang Pemuda no.23 Jember', 0, '2015-09-29 00:00:00', NULL, '', NULL, 0),
 ('122410101033', 'Qomariyatul Hasanah', 'Sie Pembelajaran', '2007043000', '085723488999', 'Jember', 1, '0000-00-00 00:00:00', NULL, '', NULL, 0),
 ('122410101085', 'aji', 'kepala biro', '2002026100', '081231808707', 'jl. nias', 0, '0000-00-00 00:00:00', NULL, '', NULL, 0),
@@ -773,7 +810,8 @@ INSERT INTO `tb_pengajuan_pembina` (`id`, `id_member`, `pembina`, `status`, `ala
 ('20160423025915', 4, '122410101033', -1, 'kamu', '2016-04-23 02:59:15', '2016-04-23 03:01:43', '', '', 0),
 ('20160423030322', 4, '122410101087', -1, NULL, '2016-04-23 03:03:22', '0000-00-00 00:00:00', '', '', 0),
 ('20160524065550', 6, '122410101086', 1, NULL, '2016-05-24 06:55:50', '0000-00-00 00:00:00', '', '', 0),
-('20160613051451', 4, '122410101086', 1, NULL, '2016-06-13 05:14:51', '0000-00-00 00:00:00', '', '', 0);
+('20160613051451', 4, '122410101086', 1, NULL, '2016-06-13 05:14:51', '0000-00-00 00:00:00', '', '', 0),
+('20160616112203', 7, '122410101087', 0, NULL, '2016-06-16 11:22:03', '0000-00-00 00:00:00', '', '', 0);
 
 -- --------------------------------------------------------
 
@@ -1114,7 +1152,7 @@ ALTER TABLE `tb_kuota_bidang`
 -- Ketidakleluasaan untuk tabel `tb_magang`
 --
 ALTER TABLE `tb_magang`
-  ADD CONSTRAINT `tb_magang_ibfk_2` FOREIGN KEY (`pembina`) REFERENCES `tb_admin` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `tb_magang_ibfk_2` FOREIGN KEY (`pembina`) REFERENCES `tb_pegawai` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `tb_magang_ibfk_3` FOREIGN KEY (`id_member`) REFERENCES `tb_member_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --

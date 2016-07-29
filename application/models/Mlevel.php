@@ -124,6 +124,15 @@ class Mlevel extends MY_Model {
         return $this->update($con);
     }
 
+    public function update_level($level, $data)
+    {
+        $con['tabel'] = 'tb_level';
+        $con['where'] = array('level'=>$level);
+        $con['data']  = $data;
+
+        return $this->update($con);
+    }
+
 }
 
 ?>

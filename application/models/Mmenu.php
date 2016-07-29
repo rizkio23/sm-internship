@@ -21,7 +21,7 @@ class Mmenu extends MY_Model {
     	$con['tabel']		= 'tb_menu';
     	$con['select']		= 'id, menu, link, deskripsi, icon, visible';
         $con['where']       = array('deleted'=>'0');
- 		$con['order_by']	= 'id ASC';
+ 		$con['order_by']	= 'menu ASC';
 
  		return $this->get($con)->result_array();
     }

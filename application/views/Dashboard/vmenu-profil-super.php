@@ -4,12 +4,12 @@
     <!-- BEGIN PAGE TITLE -->
     <div class="page-title dash">
       <h3>Profil</h3>
-    </div> 
+    </div>
     <!-- END OF PAGE TITLE -->
 
     <!-- BEGIN BREADCRUMB -->
     <ol class="breadcrumb dash">
-      <li><a href="<?php echo base_url().'dashboard/insight';?>">Halaman Utama</a></li>
+      <li><a href="<?php echo base_url().'dashboard/';?>">Halaman Utama</a></li>
       <li class="active">Profil</li>
     </ol>
     <!-- END OF BREADCRUMB -->
@@ -43,7 +43,7 @@
                 <div class="col-md-4">
                   <input type="text" class="form-control" value="<?=$profil['nama']?>" name="nama" placeholder="Nama">
                 </div>
-              </div>      
+              </div>
 
               <div class="form-group">
                 <label class="col-md-2 control-label">Unit Kerja</label>
@@ -61,7 +61,7 @@
                 <div class="col-md-4">
                   <input type="text" class="form-control dash" value="<?=$profil['jabatan']?>" name="jabatan" >
                 </div>
-              </div> 
+              </div>
 
               <div class="form-group">
                 <label class="col-md-2 control-label">Nomor HP</label>
@@ -75,8 +75,8 @@
                 <div class="col-md-4">
                   <textarea class="form-control dash" name="alamat" ><?=$profil['alamat']?></textarea>
                 </div>
-              </div>      
-                
+              </div>
+
               <div class="form-actions">
                 <div class="row">
                   <div class="col-md-offset-2 col-md-9">
@@ -87,14 +87,14 @@
               </div>
             </form>
             <!-- END FORM -->
-          </div>  
+          </div>
           <!-- END PORTLET BODY -->
-        </div>  
-      </div>     
+        </div>
+      </div>
       <!-- END OF PORTLET -->
     </div>
     <!-- END OF ROW -->
-  </div>  
+  </div>
   <!-- END OF CONTENT -->
-</div>  
+</div>
 <!-- END OF PAGE -->

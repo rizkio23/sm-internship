@@ -4,12 +4,12 @@
     <!-- BEGIN PAGE TITLE -->
     <div class="page-title dash">
       <h3>Ubah Kata Sandi</h3>
-    </div> 
+    </div>
     <!-- END OF PAGE TITLE -->
 
     <!-- BEGIN BREADCRUMB -->
     <ol class="breadcrumb dash">
-      <li><a href="<?php echo base_url().'dashboard/insight';?>">Halaman Utama</a></li>
+      <li><a href="<?php echo base_url().'dashboard/';?>">Halaman Utama</a></li>
       <li class="active">Ubah Kata Sandi</li>
     </ol>
     <!-- END OF BREADCRUMB -->
@@ -43,14 +43,14 @@
                   <div class="col-md-4">
                     <input type="password" class="form-control" name="oldpassword" placeholder="Sandi Lama" required>
                   </div>
-                </div>      
+                </div>
 
                 <div class="form-group">
                   <label class="col-md-2 control-label" for="password">Kata Sandi Baru</label>
                   <div class="col-md-4">
                     <input id="newpassword" type="password" class="form-control" name="newpassword" placeholder="Sandi Baru" required>
                   </div>
-                </div>     
+                </div>
 
                 <div class="form-group">
                   <label class="col-md-2 control-label" for="repasswords">Ulangi Kata Sandi Baru</label>
@@ -58,7 +58,7 @@
                     <input id="repassword" type="password" class="form-control" name="repassword" placeholder="Ulangi Kata Sandi Baru" required>
                     <p id="pesan"></p>
                   </div>
-                </div>  
+                </div>
 
                 <div class="form-actions">
                   <div class="row">
@@ -68,16 +68,16 @@
                   </div>
                 </div>
               </form>
-          </div>  
+          </div>
           <!-- END PORTLET BODY -->
-        </div>  
-      </div>     
+        </div>
+      </div>
       <!-- END OF PORTLET -->
     </div>
     <!-- END OF ROW -->
-  </div>  
+  </div>
   <!-- END OF CONTENT -->
-</div>  
+</div>
 <!-- END OF PAGE -->
 
 <script type="text/javascript">
@@ -89,7 +89,7 @@
       $("#repassword, #newpassword").keyup(function(){
            newpassword = $("#newpassword").val();
            repassword = $("#repassword").val();
-           if (repassword != newpassword) 
+           if (repassword != newpassword)
            {
               $("#pesan").text("password baru dan re-type password tidak cocok");
               $("#submit").prop('disabled',true);
@@ -108,5 +108,3 @@
       });
   });
 </script>
-
-
